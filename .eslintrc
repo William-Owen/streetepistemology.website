@@ -1,0 +1,101 @@
+{
+	"env": {
+		"browser": true,
+		"node": true,
+		"jest": true
+	},
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"extensions": [".js", ".jsx", ".ts", ".tsx"]
+			}
+		}
+	},
+	"extends": [
+		"plugin:mdx/recommended",
+		"airbnb",
+		"plugin:import/errors",
+		"plugin:import/warnings",
+		"plugin:import/typescript"
+	],
+	"rules": {
+		"semi": [
+			"error",
+			"never"
+		],
+		"indent": [
+			"error",
+			"tab",
+			{
+				"SwitchCase": 1,
+				"VariableDeclarator": 0
+			}
+		],
+		"no-tabs": [
+			"error",
+			{
+				"allowIndentationTabs": true
+			}
+		],
+		"padded-blocks": [
+			"error",
+			"always"
+		],
+		"lines-between-class-members": [
+			"error",
+			"always"
+		],
+		"max-len": 0,
+		"react/jsx-closing-bracket-location": [
+			1,
+			"after-props"
+		],
+		"react/react-in-jsx-scope": [
+			0
+		],
+		"linebreak-style": [
+			0
+		],
+		"operator-linebreak": [
+			0
+		],
+		"react/jsx-indent-props": [
+			0
+		],
+		"react/jsx-indent": [
+			1,
+			"tab"
+		],
+		"react/no-danger": 0,
+		"react/forbid-prop-types": [
+			1,
+			{
+				"forbid": [
+					"any"
+				]
+			}
+		],
+		"react/jsx-first-prop-new-line": [
+			0
+		],
+		"quotes": [
+			2,
+			"double",
+			{
+				"allowTemplateLiterals": true
+			}
+		],
+		"react/jsx-one-expression-per-line": [
+			0
+		],
+		"react/jsx-filename-extension": [
+			1,
+			{
+				"extensions": [
+					".js",
+					".jsx"
+				]
+			}
+		]
+	}
+}

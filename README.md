@@ -1,3 +1,7 @@
+# Street Epistemology
+
+A Street Epistemology website to support the Street Epistemology community and related training courses and content.
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
