@@ -1,26 +1,16 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import clsx from "clsx";
-import { useStaticQuery, graphql } from "gatsby"
-import * as style from "./Layout.module.css"
+import clsx from "clsx"
 import { Link } from "gatsby"
+import * as style from "./Layout.module.css"
+import Logo from "../../images/SE-Logo-one-color-2021.inline.svg"
 
 const Layout = ({ children }) => {
-
-	const data = useStaticQuery(graphql`
-		query SiteTitleQuery {
-			site {
-				siteMetadata {
-					title
-				}
-			}
-		}
-	`)
 
 	const rootClassName = clsx([
 
 		style.Layout,
-		"Layout"
+		"Layout",
 
 	])
 
@@ -30,20 +20,20 @@ const Layout = ({ children }) => {
 
 			<header>
 
+				<Logo />
+
 				<h1>
 					<Link to="/">Street Epistemology</Link>
 				</h1>
 
 				<nav>
 
-					<Link to="/about">What is Street Epistemology</Link>
-					<Link to="/videos">See it in action</Link>
+					<Link to="/">What is Street Epistemology</Link>
 					<Link to="/faqs">FAQs</Link>
-					<Link to="/communities">Communities</Link>
 					<Link to="/resources">Resources</Link>
 					<Link to="/shop">Shop</Link>
 					<Link to="/blog">Blog</Link>
-					<Link to="/course"><span className={style.CourseLink}>Course</span></Link>
+					<Link to="/course"><span className={style.CourseLink}>Street Epistemology Courses</span></Link>
 
 				</nav>
 
@@ -61,9 +51,12 @@ const Layout = ({ children }) => {
 
 				</nav>
 
+				<a className={style.credit} href="https://wo.dev">Website by wo.dev</a>
+
 				<div className="copyright">
-					© {new Date().getFullYear()}<br />
-					<a href="https://streetepistemologyinternational.org/">Street Epistemology International</a>
+
+					© {new Date().getFullYear()} <a href="https://streetepistemologyinternational.org/">Street Epistemology International</a>
+
 				</div>
 
 			</footer>
@@ -75,7 +68,7 @@ const Layout = ({ children }) => {
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+	children: PropTypes.node.isRequired,
 }
 
 export default Layout

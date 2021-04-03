@@ -10,11 +10,36 @@
 
 :root {
 
+	--color-red: #f94144ff;
+	--color-orange-hot: #f3722cff;
+	--color-orange-orange: #f8961eff;
+	--color-orange-orange-mid: #f9844aff;
+	--color-orange-yellow: #f9c74fff;
+	--color-lime: #90be6dff;
+	--color-lime-light: rgb(189, 230, 176);
+	--color-green: #43aa8bff;
+	--color-green-shade: #4d908eff;
+	--color-blue-shade: #577590ff;
+	--color-blue: #277da1ff;
+
 	--color-background: #f4f4f4;
 	--color-text: #2a2a2a;
-	--color-links: #0285D8;
+	--color-links: var(--color-blue);
 	--color-lines:	#ffffff10;
-	--var-logo-blur: 100px
+	--var-logo-blur: 100px;
+
+}
+
+.credit {
+
+	display: block;
+	margin-top: 1rem
+}
+
+
+html {
+
+	overflow-y: scroll;
 
 }
 
@@ -44,9 +69,21 @@ h1, h2, h3, h4, h5 {
 
 }
 
+h1 {
+
+	font-size: 2.5rem;
+
+}
+
 h2, h3, h4, h5 {
 
-	color: #222
+	font-size: 2rem;
+
+}
+
+h3, h4, h5 {
+
+	font-size: 1.2rem;
 
 }
 
@@ -142,11 +179,20 @@ footer {
 
 }
 
+.Layout > header svg {
+
+	flex: 1;
+	height: 35px;
+
+}
+
+
 .Layout > header h1 {
 
 	margin: 0;
 	font-size: 1.3rem;
 	font-weight: bold;
+	letter-spacing: -0.03em;
 
 }
 

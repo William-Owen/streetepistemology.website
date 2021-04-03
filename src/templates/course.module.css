@@ -1,0 +1,88 @@
+.courseTemplatePage {
+
+	display: block;
+
+}
+
+.courseFrame {
+
+	display: flex;
+
+}
+
+.courseFrame > aside {
+
+	flex: 1;
+	max-width: 500px;
+	padding: 60px;
+
+}
+
+.description {
+
+	margin: 40px 0;
+
+}
+
+.description p {
+
+	margin: 0;
+
+}
+
+.courseFrame > aside nav a {
+
+	padding: 10px 0;
+	border-bottom: 1px solid #cccccc;
+
+}
+
+.courseFrame > aside nav a:last-child {
+
+	padding-bottom: 0;
+	border-bottom: none;
+
+}
+
+.courseFrame > main {
+
+	flex: 1;
+	background: #fff;
+	padding: 60px;
+
+}
+
+.courseTemplatePage header {
+
+	display: block;
+	background-color: var(--color-lime);
+	padding: 60px;
+	color: white;
+
+}
+
+.courseTemplatePage header h1 {
+
+	display: block;
+	background-color: var(--color-lime);
+	margin: 0;
+	font-weight: bold;
+
+}
+
+
+.courseTemplatePage header h1 span {
+
+	font-size: 1.5rem;
+	display: block;
+	font-weight: normal;
+
+}
+
+
+.lessonView h1 span {
+
+	font-size: 1rem;
+	display: block;
+
+}
