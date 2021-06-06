@@ -97,6 +97,7 @@ exports.createPages = ({ actions, graphql }) => {
 	const articlesTemplate = path.resolve(`src/templates/blog.tsx`)
 	const courseTemplate = path.resolve(`src/templates/course.tsx`)
 	const lessonTemplate = path.resolve(`src/templates/lesson.tsx`)
+	const moduleTemplate = path.resolve(`src/templates/module.tsx`)
 
 	return graphql(`{
 
@@ -118,6 +119,18 @@ exports.createPages = ({ actions, graphql }) => {
 		}
 		allCourse: allMarkdownRemark(
 			filter: {fields: {source: {eq: "course"}, isCourseRoot: {eq: true}}}
+		) {
+			edges {
+				node {
+					fields {
+						slug
+						course
+					}
+				}
+			}
+		}
+		allModuleRoots: allMarkdownRemark(
+			filter: {fields: {source: {eq: "course"}, isModuleRoot: {eq: true}}}
 		) {
 			edges {
 				node {
@@ -175,6 +188,7 @@ exports.createPages = ({ actions, graphql }) => {
 		const allCourseResults = result.data.allCourse.edges
 		const coursesModuleCollectionResults = result.data.coursesModuleCollection.group
 		const allLessonResults = result.data.allLesson.edges
+		const allModuleResults = result.data.allModuleRoots.edges
 
 		// Create an object to represent the course with the
 		// course name as the key
@@ -254,6 +268,25 @@ exports.createPages = ({ actions, graphql }) => {
 				context: {
 					slug: post.node.fields.slug,
 					relatedModules,
+				},
+			})
+
+		})
+
+		// Create pages for each Module.
+
+		allModuleResults.forEach((post, index) => {
+
+			const nextPost = index === allModuleResults.length - 1 ? null : allModuleResults[index + 1].node
+			const previousPost = index === 0 ? null : allModuleResults[index - 1].node
+
+			createPage({
+				path: post.node.fields.slug,
+				component: moduleTemplate,
+				context: {
+					slug: post.node.fields.slug,
+					previousPost,
+					nextPost,
 				},
 			})
 

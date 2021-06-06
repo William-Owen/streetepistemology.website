@@ -1,0 +1,23 @@
+import React from "react"
+import clsx from 'clsx'
+//import * as style from "./{{componentName}}.module.sass"
+
+// interface {{componentName}}Props {
+//	children?: React.ReactNode,
+// }
+
+const {{componentName}}: React.FC = () => {
+
+	const classNames = clsx({
+		"{{componentName}}": true,
+	})
+
+	return (
+
+		<div data-testid="levo-{{componentName}}" className={classNames} />
+
+	)
+
+}
+
+export default {{componentName}};

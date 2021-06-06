@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 279 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="Artboard1" transform="matrix(1,0,0,1,-21,-80)">
+        <rect x="21" y="80" width="279" height="160" style="fill:none;"/>
+        <clipPath id="_clip1">
+            <rect x="21" y="80" width="279" height="160"/>
+        </clipPath>
+        <g clip-path="url(#_clip1)">
+            <g id="Profile-Avatar" serif:id="Profile Avatar" transform="matrix(1,0,0,1,0,-155)">
+                <g transform="matrix(0.36168,0,0,0.413032,17.4846,126.819)">
+                    <clipPath id="_clip2">
+                        <circle cx="587.047" cy="455.609" r="190.21"/>
+                    </clipPath>
+                    <g clip-path="url(#_clip2)">
+                        <g transform="matrix(2.76488,-0,-0,2.42112,9.71964,261.919)">
+                            <use xlink:href="#_Image3" x="140.43" y="1.445" width="137.59px" height="157.126px" transform="matrix(0.997031,0,0,0.994466,0,0)"/>
+                        </g>
+                    </g>
+                </g>
+                <g transform="matrix(0.762018,0,0,0.858116,-870.501,-87.4075)">
+                    <clipPath id="_clip4">
+                        <path d="M1443.94,377.39L1352.63,560.015L1307.19,469.141L1261.75,560.015L1170.44,377.39L1443.94,377.39Z"/>
+                    </clipPath>
+                    <g clip-path="url(#_clip4)">
+                        <g transform="matrix(1.3123,-0,-0,1.16534,1169.92,375.716)">
+                            <use xlink:href="#_Image5" x="0.396" y="1.44" width="208.412px" height="156.713px" transform="matrix(0.997186,0,0,0.998175,0,0)"/>
+                        </g>
+                    </g>
+                </g>
+                <g transform="matrix(0.36168,0,0,0.413032,17.4846,126.819)">
+                    <path d="M433.633,567.961C410.494,536.491 396.837,497.632 396.837,455.609C396.837,350.629 482.067,265.399 587.047,265.399L433.633,567.961Z" style="fill:url(#_Radial6);"/>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <image id="_Image3" width="138px" height="158px" xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAUDBAQEAwUEBAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8fExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wAARCACeAIoDAREAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAgABBgX/xAAWEAEBAQAAAAAAAAAAAAAAAAABABH/xAAYAQEBAQEBAAAAAAAAAAAAAAAAAQMCB//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oADAMBAAIRAxEAPwDzb3p4yoKCgoKCaAsBWArUBYoLAVgLAVgCxRWqjsHs0cKCgoKCYCtAWArUFYoLAFgLAVgKxRWoCxRg9ujhQUFBQYtAVgLUBYorAFgLAVgKxQWoKxQWAwe7RwoKCgmgKwFYAtVFYAsAWDGArAFqoLFFYAsGQj3qOFBQTAWgKwFagLFFYAsBYCwFYoLVRWALAVgMWOgozUFBi0BYCtQFigsBWAsBWArFBagLFFYAwYxR2DoaM1BjQFYCsBWqgsBWAMBYCsBWqgsUVgCwFiisGbB0VGaaAsBWArUBYoLAVgLAWArFBaqCwFYCsBYoLBkHSUZitBjAFqCsUFgKwBgxYAsUVqAsUVgCwFiisBWA1V0q3DIVgK1AWKKwBYCwFYCsAWqisUFgLAWKKwBYCtVGEdM3DIVgC1UVgCwFYCwFYAtVFYoLAFgLBjFBYCtQFisqOlbNkK1AWKKwBYCwFgKxQWqisAWArAWKKwBagsUWozYrpVuGILFFYAsBYCsBWKC1AWKKwFgLFFYAsBWqiwFaqOwdKtwyBYCsAYCwFYCtVBYorAFgLFFYCsAWoKxRaqKwGDpVuGQLAVgLAWArFBaqCwFYCsBYorAFqCsUVqorAFgyDpFuGQrAFgxYAsUVqAsUVgCwFiisBWANVFqCsUVgLBkHRrcMhYCsBWArVQWKCwFYCxRWArAFqosBaqKwBgyCg6JbhkLAVgC1UVigsBWAMGMUFgK1BWKK1UFgKwGCgoOgW4ZCwFYoLVRWALAVgLFFYAtQWKLUFYorAYMgoKD324ZCsUFqCxQWAsBYorAGAtVFgLVQWAsGQUFBQf/Z"/>
+        <image id="_Image5" width="209px" height="157px" xlink:href="data:image/jpeg;base64,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"/>
+        <radialGradient id="_Radial6" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(122.271,125.112,-124.784,122.593,575.929,455.609)"><stop offset="0" style="stop-color:rgb(210,132,255);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(214,128,252);stop-opacity:1"/></radialGradient>
+    </defs>
+</svg>

@@ -1,18 +1,47 @@
-import React from "react"
-import Page from "../components/Page"
+import React, {useState, useEffect} from "react"
 import clsx from "clsx"
-import Logo from "../images/SE-Logo-2021.inline.svg"
-import * as style from "./index.module.css"
-import whatIsSEHeroImage from "../images/photo-1507494924047-60b8ee826ca9.jpg";
+import * as style from "./index.module.sass"
+import moon from "../images/earth.png";
+import { Link } from 'gatsby'
+import { StaticImage } from "gatsby-plugin-image"
+import HelpIcon from "../images/help.svg"
+interface ArticleListingItemProps {
+
+	title: string,
+	author: string,
+	publishedDate: string,
+	tags?: [string]
+
+}
 
 const IndexPage = () => {
 
+	const [messagesClassName, setMessagesClassName] = useState(style.conversationSpace)
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			doMessages()
+		}, 500)
+		return () => clearTimeout(timer)
+	}, [])
+
 	const rootClassName = clsx([
 
-		style.IndexPage,
-		"index-page",
+		style.pageHomepage,
+		"pageHomepage",
 
 	])
+
+	const doMessages = () => {
+
+		setMessagesClassName(
+			clsx([
+				style.show,
+				style.conversationSpace
+			])
+		)
+
+	}
 
 	return (
 
@@ -20,54 +49,44 @@ const IndexPage = () => {
 
 			<header>
 
-				<div>
+				<div className={style.heroMessage}>
 
-					<Logo />
-					<h1>Street Epistemology</h1>
-					<h2>Great <strong>conversations</strong> lead to better <strong>ideas</strong></h2>
+					<div>
+
+						<h2>Helping others reflect on their ideas.</h2>
+
+						<p>Ideas shape our world, but sometimes talking about them can be difficult. Street Epistemology is a productive non-confrontational way to help others explore and reflect on their ideas and beliefs.</p>
+						<p>Street Epistemology is free and open to everyone, learn the tools and start having great conversations that help others.</p>
+
+						<Link className={style.btnStartLearning} to="/">Start learning</Link><Link to="/">Find out more</Link>
+
+					</div>
+
+				</div>
+
+				<div style={{backgroundImage: `url(${moon})`}} className={messagesClassName}>
+
+					<div>
+
+						<p className={style.chatPersonA}>We landed on the moon in 1969</p>
+						<p className={style.chatPersonB}>The Moon landings were a NASA hoax</p>
+
+					</div>
 
 				</div>
 
 			</header>
 
-			<section className={style.whatIsSE}>
-
-				<Page>
-
-					<h3><strong>No one wants to believe bad ideas,</strong><br /><em>...but we probably all do.</em></h3>
-
-					<p>We all want to believe as many true things, and as few false things as possible. However, sometimes we find ourselves believing in things without ever really stopping to think about why.</p>
-
-					<p><strong>Street Epistemology</strong> is in part based on the Socratic method, a dialogue between individuals, based on asking questions and stimulate critical thinking. Through a friendly, non-confrontational conversation, <strong>Street Epistemology</strong> helps people reflect on what they believe and importantly, why they believe it.</p>
-					<p><strong>Street Epistemology</strong> is not about promoting any one belief over another, only reflecting on why we believe something. We hope it will help you believe as many true things, and as few false things as possible.</p>
-
-				</Page>
-
-				<div style={{backgroundImage: `url(${whatIsSEHeroImage})`}} className={style.heroImage} />
-
-			</section>
-
-			<section className={style.seeIt}>
-
-				<h2>See Street Epistemology in action</h2>
+			<section className={style.support}>
 
 				<div>
 
-					<div className={style.seeItText}>
+					<HelpIcon />
 
-						<p>One of the best ways to learn the techniques used in Street Epistemology is to see them in action. The SE Latest Releases playlist is the best place to find new content and see how SE is progressing.</p>
+					<div>
 
-					</div>
-
-					<div className={style.seeItVideo}>
-
-						<div className={style.videoWrapper}>
-
-							<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/IXzCdauGc_8?controls=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-
-						</div>
-
-						<p>Video courtesy of Anthony Magnabosco</p>
+						<h3>Feeling a little lost?</h3>
+						<p>Having conversations that change your views can sometimes leave you feeling a little lost;<br /><Link to="\resources">we have collected a number of resources that may help</Link></p>
 
 					</div>
 

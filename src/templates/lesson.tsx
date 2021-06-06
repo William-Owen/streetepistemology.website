@@ -30,7 +30,7 @@ const IndexPage = (props) => {
 
 				<article>
 
-					<h1>{lessonTitle}</h1>
+					<h1>LESSON: {lessonTitle}</h1>
 
 					<div className="article-meta">
 
