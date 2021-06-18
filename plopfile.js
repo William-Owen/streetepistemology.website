@@ -1,11 +1,18 @@
-module.exports = function (plop) {
+const plopProject = (plop) => {
 
-	// create your generators here
+	// This file is used by Plop; a tool that saves you time
+	// and hel build new files and folders using templates.
+	// The Templates are located in the plop-templates
+	// folder. More information about plop can be seen at
+	// https://github.com/William-Owen
 
-	const componentRoot = "src/components/"
+	const componentRoot = "src/components"
+	const templateRoot = "plop-templates"
+
+	plop.setHelper("createFileName", (s) => s.replace(/[^a-z0-9]/gi, "_").toLowerCase())
 
 	plop.setGenerator("Component", {
-		description: "New project component",
+		description: "A new react component",
 		prompts: [
 
 			{
@@ -14,27 +21,64 @@ module.exports = function (plop) {
 				message: "Component name",
 			},
 
-		], // array of inquirer prompts
+		],
 		actions: [
 
 			{
 				type: "add",
-				path: `${componentRoot}{{componentName}}/{{componentName}}.tsx`,
-				templateFile: "plop-templates/component/componentName.tsx.hbs",
-			},
-
-			{
-				type: "add",
-				path: `${componentRoot}{{componentName}}/{{componentName}}.module.sass`,
-				templateFile: "plop-templates/component/componentName.sass.hbs",
+				path: `${componentRoot}/{{componentName}}/{{componentName}}.tsx`,
+				templateFile: `${templateRoot}/component/componentName.tsx.hbs`,
 			},
 			{
 				type: "add",
-				path: `${componentRoot}{{componentName}}/index.tsx`,
-				templateFile: "plop-templates/component/index.tsx.hbs",
+				path: `${componentRoot}/{{componentName}}/{{componentName}}.test.tsx`,
+				templateFile: `${templateRoot}/component/componentName.test.tsx`,
+			},
+			{
+				type: "add",
+				path: `${componentRoot}/{{componentName}}/{{componentName}}.module.sass`,
+				templateFile: `${templateRoot}/component/componentName.sass.hbs`,
+			},
+			{
+				type: "add",
+				path: `${componentRoot}/{{componentName}}/index.tsx`,
+				templateFile: `${templateRoot}/component/index.tsx.hbs`,
 			},
 
-		], // array of actions
+		],
+	})
+
+	plop.setGenerator("FAQ", {
+		description: "Add an FAQ content item",
+		prompts: [
+
+			{
+				type: "input",
+				name: "title",
+				message: "FAQ Question",
+			},
+			{
+				type: "input",
+				name: "weight",
+				message: "weight",
+				default: 100,
+			},
+			{
+				type: "editor",
+				name: "answer",
+				message: "FAQ Answers",
+			},
+
+		],
+		actions: [
+			{
+				type: "add",
+				path: `content/faqs/{{createFileName title}}.md`,
+				templateFile: `${templateRoot}/faq/faq.hbs`,
+			},
+		],
 	})
 
 }
+
+module.exports = plopProject

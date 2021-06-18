@@ -1,23 +1,10 @@
-import React from "react"
-import clsx from 'clsx'
-//import * as style from "./{{componentName}}.module.sass"
+import * as React from 'react'
+import { render, screen } from '@testing-library/react'
+import {{componentName}} from '.'
 
-// interface {{componentName}}Props {
-//	children?: React.ReactNode,
-// }
-
-const {{componentName}}: React.FC = () => {
-
-	const classNames = clsx({
-		"{{componentName}}": true,
+describe('Component: {{componentName}}', () => {
+	it('renders', () => {
+		const { container } = render(<{{componentName}} />)
+		expect(container).toBeInTheDocument()
 	})
-
-	return (
-
-		<div data-testid="levo-{{componentName}}" className={classNames} />
-
-	)
-
-}
-
-export default {{componentName}};
+})

@@ -52,6 +52,12 @@
 
 		nav
 
+			position: absolute
+			height: 100vh
+			width: 100vw
+			top: 0
+			left: 0
+			background: var(--color-green)
 			flex-grow: 1
 			display: flex
 			flex-direction: column
@@ -64,6 +70,26 @@
 				font-weight: 400
 				color: var(--color-text)
 				text-align: center
+
+			@media screen and (min-width: 680px)
+
+				background: none
+				height: auto
+				width: auto
+				position: relative
+				top: 0
+				left: 0
+				justify-content: flex-end
+				align-items: flex-end
+
+			@media screen and (min-width: 880px)
+
+				flex-direction: row
+
+				a
+
+					text-align: center
+					margin: 0 10px 0
 
 		h1
 
@@ -91,30 +117,81 @@
 		flex-basis: 45px
 		margin: 0
 
+.primaryNavigation
+
+	display: flex
+	padding: 30px 60px
+
+	a
+
+		list-style: 1rem
+		line-height: 1rem
+		font-size: 0.9rem
+		padding: 0.5rem 0
+		border-bottom: 1px solid var(--color-lines)
+		font-weight: bold
+
+		&:last-child
+
+			border: none
+			margin-bottom: 0
+			padding-bottom: 0
+
+		div
+
+			font-size: 0.8rem
+			font-weight: normal
+			margin-top: 5px
+			color: var(--color-text)
+
+	h3
+
+		font-size: 1.2rem
+		border: none
+		padding: 0
+
+	nav
+
+		flex: 1
+		padding: 1rem
+		display: flex
+		flex-direction: column
+
 footer
 
-	padding: 60px
+	padding: 1em
 	font-size: 14px
 	text-align: center
 	color: var(--color-text-soft)
+	background: #fafafa
+
+	@media screen and ( min-width: 600px )
+
+		padding: 2rem
+
+	h4
+
+		color: #888
 
 	.linksAndCredit
 
 		text-align: left
 		margin: 0 auto
 		display: inline-flex
+		flex-wrap: wrap
 
 		& > nav
 
 			padding: 1rem
+			min-width: 250px
 			flex: 1
 
 			a
 
 				display: block
 				line-height: 1.4em
-				padding: .5rem 0
-				border-bottom: 1px solid var(--color-lines)
+				padding: .3rem 0
+				color: var(--color-text-soft)
 
 				a:last-child
 
@@ -133,18 +210,18 @@ footer
 
 	.meta
 
-		padding: 2rem
+		padding: 1rem
 		text-align: left
 
 		nav
 
 			display: flex
 			flex-direction: row
-			margin-bottom: 0.5rem
+			margin-bottom: 2rem
 
 			a
 
-				margin: 0 1em 1em 0
+				margin: 0 1em 0 0
 				line-height: 0
 
 			svg
@@ -166,13 +243,13 @@ footer
 
 .sei
 
-	margin-top: 1rem
+	margin-top: 2rem
 	display: flex
 
 .footerLogo
 
-	width: 200px
-	margin: 2rem 0
+	width: 80px
+	margin: 2rem 0 1rem 0
 
 	path
 
@@ -186,15 +263,3 @@ footer
 	svg
 
 		width: 75px
-
-@media screen and (min-width: 880px)
-
-	.Layout > header nav
-
-		flex-direction: row
-		align-items: center
-		justify-content: flex-end
-
-		a
-
-			margin: 0 10px 0

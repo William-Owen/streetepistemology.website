@@ -6,9 +6,7 @@ declare module '*.css' {
 	export = classNames;
 
 }
-
-declare module "*.sass" {
-
+declare module '*.sass' {
 	interface IClassNames {
 		[className: string]: string
 	}
