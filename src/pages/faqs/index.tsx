@@ -71,15 +71,15 @@ const IndexPage = ({ data }) => {
 						<DisplayFAQ faq={faq} />
 					))}
 
-					<h2>Did we miss something?</h2>
+					<section className={style.didWeMissSomething}>
+						<h4>Did we miss something?</h4>
 
-					<p>
-						If you feel that the Street Epistemology FAQ is missing
-						a key question, if you are interested in helping us
-						maintain the FAQ or if you have other feedback, you can
-						share your thoughts on our{' '}
-						<a href='/contact'>Contact</a>&nbsp;page.
-					</p>
+						<p>
+							If you have a great question you think we should add
+							to our FAQ please let us know via our{' '}
+							<a href='/contact'>Contact</a>&nbsp;page.
+						</p>
+					</section>
 				</Page>
 			</main>
 		</div>
