@@ -11,7 +11,7 @@ const IndexPage = () => {
 
 	return (
 		<Page className={rootClassName}>
-			<PageHeader heading='Street Epistemology Resources' />
+			<PageHeader heading='Resources' />
 
 			<p>
 				Weather you have been, affected by Street Epistemology or are
@@ -29,7 +29,7 @@ const IndexPage = () => {
 							Street Epistemology
 						</p>
 					</Link>
-					<Link to='/resources/fallacies'>
+					{/* <Link to='/resources/fallacies'>
 						<h5>Common Logical Fallacies</h5>
 						<p>
 							Logical fallacies are mistakes in reasoning, that
@@ -38,16 +38,16 @@ const IndexPage = () => {
 							helpful way to have a productive conversation, but
 							they are very useful to notice none the less.
 						</p>
-					</Link>
-					<Link to='/resources/youtube'>
+					</Link> */}
+					{/* <Link to='/resources/youtube'>
 						<h5>YouTube Channels</h5>
 						<p>
 							YouTube can be a great place to see Street
 							Epistemology in action; and watch some fantastic
 							people having amazing conversations.
 						</p>
-					</Link>
-					<Link to='/resources/books'>
+					</Link> */}
+					{/* <Link to='/resources/books'>
 						<h5>Recommended Books</h5>
 						<p>
 							Street Epistemology touch on a lot of different
@@ -56,8 +56,8 @@ const IndexPage = () => {
 							that we might recommend or that are often refereed
 							to within the communities.{' '}
 						</p>
-					</Link>
-					<Link to='/resources/support'>
+					</Link> */}
+					{/* <Link to='/resources/support'>
 						<h5>Mental health and support</h5>
 						<p>
 							Having conversations that change your views can
@@ -67,8 +67,8 @@ const IndexPage = () => {
 							that you can pass on to your conversations partners
 							this section may help.
 						</p>
-					</Link>
-					<Link to='/resources/websites'>
+					</Link> */}
+					{/* <Link to='/resources/websites'>
 						<h5>Websites</h5>
 						<p>
 							There are a lot of amazing websites and resources
@@ -76,7 +76,7 @@ const IndexPage = () => {
 							interested in leaning more about the many topics
 							encountered in and by Street Epistemology.
 						</p>
-					</Link>
+					</Link> */}
 				</PageNavigation>
 
 				{/* <ul>

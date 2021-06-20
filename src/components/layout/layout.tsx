@@ -1,7 +1,7 @@
-import * as React from 'react'
+import React, { useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import * as style from './Layout.module.sass'
 import SELogo from '../../images/street-epistemology-logo-simple-color.inline.svg'
 import WOLogo from '../../images/wo_dev_transparent.svg'
@@ -9,26 +9,78 @@ import IconDiscord from '../../images/discord.inline.svg'
 import IconFacebook from '../../images/facebook.inline.svg'
 import IconReddit from '../../images/reddit.inline.svg'
 import IconTwitter from '../../images/twitter.inline.svg'
+import IconMenu from '../../images/menu.inline.svg'
 
 const Layout = ({ children }) => {
 	const rootClassName = clsx([style.Layout, 'Layout'])
+	const [isMenuOpen, setIsMenuOpen] = useState(false)
+	const primaryNavigationRef = useRef()
+	let headerClassName = ''
 
+	// Get meta data from gatsby-config
+
+	const { site } = useStaticQuery(
+		graphql`
+			query {
+				site {
+					siteMetadata {
+						discordUrl
+						redditUrl
+						twitterUrl
+						facebookUrl
+					}
+				}
+			}
+		`
+	)
+
+	const metaData = site.siteMetadata
+
+	// Layout event handlers
+
+	const handelMenuClick = () => setIsMenuOpen(!isMenuOpen)
+	const handelMenuLinkClick = () => setIsMenuOpen(false)
+
+	// Handle body locking when menu is open. We need to
+	// check for the window object to avoid issues during
+	// gatsby building
+
+	if (typeof window !== `undefined`) {
+		if (isMenuOpen) {
+			document.body.classList.add(style.scrollLock)
+			headerClassName = style.menuOpen
+		} else {
+			document.body.classList.remove(style.scrollLock)
+		}
+	}
 	return (
 		<div className={rootClassName}>
-			<header>
-				<SELogo />
-				<Link to='/'>
+			<header className={headerClassName}>
+				<SELogo className={style.logo} />
+				<Link className={style.siteTitle} to='/'>
 					<h1>
 						Street Epistemology
 						<sub>Great conversations lead to better ideas</sub>
 					</h1>
 				</Link>
-				<nav>
-					<Link to='/learn'>Learn</Link>
-					<Link to='/resources'>Resources</Link>
-					<Link to='/communities'>Communities</Link>
-					<Link to='/faqs'>FAQs</Link>
+				<nav ref={primaryNavigationRef}>
+					<Link onClick={handelMenuLinkClick} to='/learn'>
+						Learn
+					</Link>
+					<Link onClick={handelMenuLinkClick} to='/resources'>
+						Resources
+					</Link>
+					<Link onClick={handelMenuLinkClick} to='/communities'>
+						Communities
+					</Link>
+					<Link onClick={handelMenuLinkClick} to='/faqs'>
+						FAQs
+					</Link>
 				</nav>
+				<IconMenu
+					onClick={handelMenuClick}
+					className={style.menuIcon}
+				/>
 			</header>
 			{/*
 			<nav className={style.primaryNavigation}>
@@ -126,36 +178,46 @@ const Layout = ({ children }) => {
 							Street Epistemology Resources
 						</Link>
 						<Link to='/faqs'>Street Epistemology FAQs</Link>
-						<Link to='/shop'>Merchandise Shop</Link>
+						<a href='https://www.evolvefish.com/Street-Epistemology_c_143.html'>
+							Merchandise Shop
+						</a>
 					</nav>
 					<nav>
 						<h4>Social</h4>
-						<a href='/'>Street Epistemology Discord</a>
-						<a href='/'>Street Epistemology Facebook</a>
-						<a href='/'>Street Epistemology Reddit</a>
-						<a href='/'>Street Epistemology Twitter</a>
+						<a href={metaData.discordUrl}>
+							Street Epistemology Discord
+						</a>
+						<a href={metaData.facebookUrl}>
+							Street Epistemology Facebook
+						</a>
+						<a href={metaData.redditUrl}>
+							Street Epistemology Reddit
+						</a>
+						<a href={metaData.twitterUrl}>
+							Street Epistemology Twitter
+						</a>
 					</nav>
 					<nav>
 						<h4>Website</h4>
-						<Link to='/contact'>
+						<a href='mailto:contact@streetepistemology.com'>
 							Contact Street Epistemology International
-						</Link>
+						</a>
 						<Link to='/terms'>Website Terms of Service</Link>
 						<Link to='/privacy'>Website Privacy Policy</Link>
 					</nav>
 					<div className={style.meta}>
 						<nav>
-							<a href='/'>
-								<IconDiscord alt='Discord' />
+							<a href={metaData.discordUrl}>
+								<IconDiscord />
 							</a>
-							<a href='/'>
-								<IconFacebook alt='Facebook' />
+							<a href={metaData.facebookUrl}>
+								<IconFacebook />
 							</a>
-							<a href='/'>
-								<IconReddit alt='Reddit' />
+							<a href={metaData.redditUrl}>
+								<IconReddit />
 							</a>
-							<a href='/'>
-								<IconTwitter alt='Twitter' />
+							<a href={metaData.twitterUrl}>
+								<IconTwitter />
 							</a>
 						</nav>
 						<div className={style.woCredit}>

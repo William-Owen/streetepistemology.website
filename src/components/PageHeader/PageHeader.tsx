@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import clsx from 'clsx'
 import * as style from './PageHeader.module.sass'
+import SEO from '../seo.js'
 
 interface PageHeaderProps {
 	heading: string
@@ -16,13 +17,17 @@ const PageHeader: React.FC<PageHeaderProps> = ({
 	const classNames = clsx([style.PageHeader, 'PageHeader'])
 
 	return (
-		<header data-testid='PageHeader' className={classNames}>
-			<h1>
-				{sectionHeading && <span>{sectionHeading}: </span>}
-				{heading}
-			</h1>
-			{subHeading && <p>{subHeading}</p>}
-		</header>
+		<>
+			<SEO title={`${heading}`} />
+
+			<header data-testid='PageHeader' className={classNames}>
+				<h1>
+					{sectionHeading && <span>{sectionHeading}: </span>}
+					{heading}
+				</h1>
+				{subHeading && <p>{subHeading}</p>}
+			</header>
+		</>
 	)
 }
 

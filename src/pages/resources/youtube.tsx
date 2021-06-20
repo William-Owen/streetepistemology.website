@@ -6,7 +6,7 @@ import * as style from './resources.module.sass'
 const IndexPage = () => {
 	return (
 		<>
-			<Page className={style.communities}>
+			<Page>
 				<PageHeader heading='Street Epistemology YouTube' />
 
 				<div>https://www.youtube.com/user/magnabosco210</div>

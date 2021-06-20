@@ -4,38 +4,21 @@ module.exports = {
 		title: `Street Epistemology`,
 		description: `A Street Epistemology website to support the Street Epistemology community and related training courses and content.`,
 		author: `William Owen (wo.dev)`,
+		discordUrl: `https://discordapp.com/invite/sKap3zM`,
+		redditUrl: `https://www.reddit.com/r/StreetEpistemology/`,
+		twitterUrl: `https://twitter.com/StEpistemology`,
+		facebookUrl: `https://www.facebook.com/StreetEpistemology/`,
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-image`,
 		`gatsby-plugin-sass`,
-		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				name: `course`,
-				path: `${__dirname}/content/course`,
-			},
-		},
 		`gatsby-transformer-yaml`,
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: `faqs`,
 				path: `${__dirname}/content/faqs`,
-			},
-		},
-		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				name: `blog`,
-				path: `${__dirname}/content/blog`,
-			},
-		},
-		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				name: `authors`,
-				path: `${__dirname}/content/authors`,
 			},
 		},
 		{
@@ -90,8 +73,5 @@ module.exports = {
 		},
 		`gatsby-plugin-gatsby-cloud`,
 		`gatsby-plugin-graphql-config`,
-		// this (optional) plugin enables Progressive Web App + Offline functionality
-		// To learn more, visit: https://gatsby.dev/offline
-		// `gatsby-plugin-offline`,
 	],
 }

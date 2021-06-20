@@ -1,18 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 279 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-    <g id="Artboard1" transform="matrix(1,0,0,1,-21,-80)">
-        <rect x="21" y="80" width="279" height="160" style="fill:none;"/>
-        <g id="Profile-Avatar" serif:id="Profile Avatar" transform="matrix(1,0,0,1,0,-155)">
-            <g transform="matrix(0.36168,0,0,0.413032,17.4846,126.819)">
-                <circle cx="587.047" cy="455.609" r="190.21" style="fill:rgb(158,158,158);"/>
-            </g>
-            <g transform="matrix(0.762018,0,0,0.858116,-870.501,-87.4075)">
-                <path d="M1443.94,377.39L1352.63,560.015L1307.19,469.141L1261.75,560.015L1170.44,377.39L1443.94,377.39Z" style="fill:rgb(202,202,202);"/>
-            </g>
-            <g transform="matrix(0.36168,0,0,0.413032,17.4846,126.819)">
-                <path d="M433.633,567.961C410.494,536.491 396.837,497.632 396.837,455.609C396.837,350.629 482.067,265.399 587.047,265.399L433.633,567.961Z" style="fill:rgb(218,218,218);"/>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg viewBox="0 0 279 160"
+xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
+style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2"><title>wo.dev</title><path
+style="fill:none" d="M21 80h279v160H21z"
+transform="translate(-21 -80)"/><circle cx="587.047"
+cy="455.609" r="190.21" style="fill:#9e9e9e"
+transform="matrix(.36168 0 0 .41303 -3.515 -108.181)"/><path
+d="m1443.94 377.39-91.31 182.625-45.44-90.874-45.44
+90.874-91.31-182.625h273.5z" style="fill:#cacaca"
+transform="matrix(.76202 0 0 .85812 -891.501
+-322.408)"/><path d="M433.633
+567.961c-23.139-31.47-36.796-70.329-36.796-112.352 0-104.98
+85.23-190.21 190.21-190.21L433.633 567.961z"
+style="fill:#dadada" transform="matrix(.36168 0 0 .41303
+-3.515 -108.181)"/></svg>

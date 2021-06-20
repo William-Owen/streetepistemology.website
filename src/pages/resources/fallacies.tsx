@@ -6,7 +6,7 @@ import * as style from './resources.module.sass'
 const IndexPage = () => {
 	return (
 		<>
-			<Page className={style.communities}>
+			<Page>
 				<PageHeader heading='Street Epistemology Fallacies' />
 				<p>tRUPH BOAMBBBS</p>
 			</Page>

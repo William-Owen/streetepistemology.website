@@ -1,31 +1,42 @@
 .pageHomepage
 
+	--var-message-spacing: 20px
+	--var-message-spacing-negative: calc(var(--var-message-spacing) * -1)
+
 	min-height: calc(100vh - 105px)
 	display: flex
 	flex-direction: column
 
+	@media screen and ( min-width: 1100px )
+
+		--var-message-spacing: 100px
+
 	& > header
 
 		flex-grow: 1
-		display: flex
 		text-align: center
 		min-height: 60vh
-		display: flex
-		justify-content: center
-		background-size: cover
 		background: #f1f9ff
+
+		.messagesContainer
+
+			display: none
+
+		@media screen and ( min-width: 750px )
+
+			display: flex
+			justify-content: center
+			background-size: cover
+
+			.messagesContainer
+
+				display: flex
 
 		div
 
 			flex: 1
 			background-position: 100% 50%
 			background-size: cover
-
-		h2
-
-			font-size: 2.5rem
-			line-height: 1.2em
-			font-weight: 100
 
 		.btnStartLearning
 
@@ -86,12 +97,18 @@
 
 .heroMessage
 
-	padding: 60px
+	padding: var(--base-screen-padding)
 	max-width: 650px
 	text-align: left
 	display: flex
 	justify-content: center
 	align-items: center
+
+	@media screen and ( min-width: 750px )
+
+.messagesContainer
+
+	padding: var(--var-message-spacing)
 
 .chatPersonA,
 .chatPersonB
@@ -103,6 +120,7 @@
 	border-radius: 5px
 	margin: 10px 40px
 	font-size: 1.2rem
+	font-weight: 400
 	box-shadow: 4px 4px 10px rgba(#000,0.6)
 	position: relative
 	color: #fff
@@ -123,7 +141,7 @@
 
 	text-align: left
 	background: var(--color-blue)
-	transform: translate3d(-100px, 20px, 0)
+	transform: translate3d(var(--var-message-spacing-negative), 20px, 0)
 
 	&:after
 
@@ -136,7 +154,7 @@
 	text-align: right
 	transition-delay: 0.3s
 	background: var(--color-green)
-	transform: translate3d(100px, 20px, 0)
+	transform: translate3d(var(--var-message-spacing), 20px, 0)
 
 	&:after
 
@@ -149,11 +167,11 @@
 
 	.chatPersonA
 
-		transform: translate3d(-100px,0,0)
+		transform: translate3d(var(--var-message-spacing-negative),0,0)
 
 	.chatPersonB
 
-		transform: translate3d(100px,0,0)
+		transform: translate3d(var(--var-message-spacing),0,0)
 
 	p
 

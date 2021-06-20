@@ -7,12 +7,7 @@ const IndexPage = () => {
 	return (
 		<>
 			<Page className={style.communities}>
-				<PageHeader heading='Street Epistemology Communities' />
-				<p>
-					Weather you have been, affected by Street Epistemology or
-					are looking to learn more about its practice and ideas;
-					there are a huge number of resources available to you.
-				</p>
+				<PageHeader heading='Communities' />
 				<h2>Online</h2>
 				<div>
 					<div>

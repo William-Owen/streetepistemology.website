@@ -6,6 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@types/react": "^17.0.11",
+    "body-scroll-lock": "^3.1.5",
     "clsx": "^1.1.1",
     "gatsby": "^3.7.2",
     "gatsby-plugin-gatsby-cloud": "^2.7.1",

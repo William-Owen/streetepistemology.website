@@ -1,5 +1,15 @@
 @import ./base.sass
 
+body.scrollLock
+
+	overflow: hidden
+	height: 100vh
+
+	@media screen and (min-width: 880px)
+
+		overflow: auto
+		height: 100vh
+
 .credit
 
 	display: block
@@ -29,50 +39,107 @@
 
 .Layout
 
+	@media screen and (min-width: 500px)
+
+		--base-screen-padding: var(--var-screen-padding-large)
+		--base-screen-padding-minor: var(--var-screen-padding-minor-large)
+
 	& > header
 
 		display: flex
 		flex-direction: row
 		justify-content: center
 		align-items: center
-		padding: 30px 60px
+		padding: var(--base-screen-padding-minor) var(--base-screen-padding)
 		width: 100%
 		user-select: none
 
-		svg
+		svg.logo
 
-			flex-grow: auto
-			height: 45px
+			flex-basis: 60px
 			fill: #888
 			padding-right: 10px
+			display: none
 
-		a
+			@media screen and (min-width: 375px)
+
+				display: block
+
+		a.siteTitle
 
 			color: #111
+			flex-grow: 1
+			text-decoration: none
+
+		h1
+
+			font-size: 1.4rem
+			line-height: 1em
+			margin: 0 60px 0 0
+			font-weight: 700
+			letter-spacing: -0.035em
+			text-align: left
+
+			sub
+
+				display: block
+				font-weight: 300
+				font-size: 1rem
+				letter-spacing: 0
+				margin-top: .25em
+				line-height: 1em
+				color: var(--color-text-soft)
 
 		nav
 
 			position: absolute
-			height: 100vh
-			width: 100vw
 			top: 0
 			left: 0
+			height: 100vh
+			width: 100vw
 			background: var(--color-green)
 			flex-grow: 1
 			display: flex
 			flex-direction: column
 			justify-content: center
 			align-items: center
+			display: none
+			z-index: 10000
 
 			a
 
-				font-size: 0.9rem
+				--color-links: var(--color-green-tex)
+
+				font-size: 2rem
 				font-weight: 400
-				color: var(--color-text)
 				text-align: center
 
-			@media screen and (min-width: 680px)
+		.menuIcon
 
+			// width: 35px
+			z-index: 10010
+			position: absolute
+			top: 10px
+			right: 10px
+			border-radius: 50%
+			height: 60px
+			width: 60px
+			padding: 15px
+			overflow: visible
+			background: white
+
+		&.menuOpen
+
+			nav
+
+				display: flex
+
+		@media screen and (min-width: 880px)
+
+			&.menuOpen nav,
+			nav
+
+				display: flex
 				background: none
 				height: auto
 				width: auto
@@ -81,36 +148,19 @@
 				left: 0
 				justify-content: flex-end
 				align-items: flex-end
-
-			@media screen and (min-width: 880px)
-
 				flex-direction: row
 
 				a
 
+					--color-links: var(--color-text)
+
 					text-align: center
 					margin: 0 10px 0
+					font-size: 0.9rem
 
-		h1
+			.menuIcon
 
-			font-size: 1.3rem
-			line-height: 1em
-			margin: 0
-			font-weight: 900
-			letter-spacing: -0.035em
-			color: #000
-			text-align: left
-			text-transform: none
-
-			sub
-
-				display: block
-				font-weight: 100
-				font-size: .52em
-				letter-spacing: 0
-				margin-top: .5em
-				line-height: 1em
-				color: #999
+				display: none
 
 	.logo
 
@@ -160,10 +210,10 @@
 footer
 
 	padding: 1em
-	font-size: 14px
 	text-align: center
 	color: var(--color-text-soft)
 	background: #fafafa
+	font-size: 14px
 
 	@media screen and ( min-width: 600px )
 
@@ -182,31 +232,17 @@ footer
 
 		& > nav
 
-			padding: 1rem
+			padding: 1em
 			min-width: 250px
 			flex: 1
 
 			a
 
+				--color-links: var(--color-text-soft)
+
 				display: block
 				line-height: 1.4em
-				padding: .3rem 0
-				color: var(--color-text-soft)
-
-				a:last-child
-
-					border: none
-
-			hr
-
-				border: none
-				border-top: 1px solid var(--color-lines)
-				margin: 0.5rem 0
-
-	p
-
-		margin: 0
-		font-size: 0.7rem
+				padding: .3em 0
 
 	.meta
 
@@ -217,7 +253,7 @@ footer
 
 			display: flex
 			flex-direction: row
-			margin-bottom: 2rem
+			margin-bottom: 2em
 
 			a
 
@@ -227,7 +263,7 @@ footer
 			svg
 
 				fill: var(--color-text-soft)
-				width: 2rem
+				width: 2em
 
 .woCredit
 
@@ -236,30 +272,26 @@ footer
 	align-items: center
 	line-height: 1.2
 
+	p
+
+		margin: 0
+		display: block
+
 	svg
 
-		max-width: 50px
-		margin-right: 1rem
+		width: 3em
+		margin-right: 1em
 
 .sei
 
-	margin-top: 2rem
+	margin-top: 2em
 	display: flex
 
 .footerLogo
 
 	width: 80px
-	margin: 2rem 0 1rem 0
+	margin: 2em 0 1em 0
 
 	path
 
 		fill: var(--color-text-soft)
-
-.websiteCredit
-
-	margin: 0
-	display: block
-
-	svg
-
-		width: 75px

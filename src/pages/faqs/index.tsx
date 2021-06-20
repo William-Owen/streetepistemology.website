@@ -33,7 +33,7 @@ const DisplayFAQ = ({ faq }) => {
 
 	return (
 		<section id={id}>
-			<h2>{title}</h2>
+			<h3>{title}</h3>
 
 			<main dangerouslySetInnerHTML={{ __html: html }} />
 
@@ -52,35 +52,34 @@ const DisplayFAQ = ({ faq }) => {
 
 const IndexPage = ({ data }) => {
 	const allFaqs = data.allMarkdownRemark.edges
-	console.info({ allFaqs })
 	const rootClassName = clsx([style.faqsPage, 'faqs-page'])
 
 	return (
 		<div className={rootClassName}>
-			<PageHeader heading='Street Epistemology FAQs' />
-
+			<PageHeader
+				heading='Frequently Asked Questions'
+				subHeading='These are the questions about Street Epistemology that we hear a the most within the community and our best attempts to answer them.'
+			/>
 			<main>
 				<PageNavigation className={style.PageNavigation}>
 					{allFaqs.map((faq) => (
 						<DisplayFAQLink faq={faq} />
 					))}
 				</PageNavigation>
-
-				<Page className={style.Page}>
+				<div>
 					{allFaqs.map((faq) => (
 						<DisplayFAQ faq={faq} />
 					))}
-
 					<section className={style.didWeMissSomething}>
 						<h4>Did we miss something?</h4>
 
 						<p>
 							If you have a great question you think we should add
-							to our FAQ please let us know via our{' '}
-							<a href='/contact'>Contact</a>&nbsp;page.
+							to our FAQ please let us know via{' '}
+							<a href='/contact'>our Contact page</a>.
 						</p>
 					</section>
-				</Page>
+				</div>
 			</main>
 		</div>
 	)

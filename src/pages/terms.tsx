@@ -1,22 +1,15 @@
-import React from "react"
-import Page from "../components/Page"
+import React from 'react'
+import Page from '../components/Page'
+import PageHeader from '../components/PageHeader'
 
 const IndexPage = () => {
-
 	return (
-
 		<>
-
 			<Page>
-
-				<h1>Terms of service</h1>
-
+				<PageHeader heading='Terms of service' />
 			</Page>
-
 		</>
-
 	)
-
 }
 
 export default IndexPage

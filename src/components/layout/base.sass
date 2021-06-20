@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,400&display=swap')
 
 *
 
@@ -13,43 +13,55 @@
 	--color-blue: #215EC9
 	--color-yellow: #F9C74F
 	--color-green: #32A143
-
+	--color-green: #038216
 	// utility
+
 	--color-blue-text: #fff
 	--color-blue-link: #4ff9ec
 	--color-blue-lines: #ffffff40
 	--color-green-text: #fff
-	--color-green-link: #4ff9ec
+	--color-green-link: #fff5b3
 	--color-green-lines: #ffffff40
+
+	--var-screen-padding-small: 20px
+	--var-screen-padding-large: 60px
+	--var-screen-padding-minor-small: 20px
+	--var-screen-padding-minor-large: 30px
+
+	--base-screen-padding: var(--var-screen-padding-small)
+	--base-screen-padding-minor: var(--var-screen-padding-minor-small)
 
 	// base
 
 	--color-text: #335
-	--color-text-soft: #a5a5a5
+	--color-text-soft: #737373
 	--color-links: var(--color-blue)
 	--color-lines: #f5f5f5
 
 html,
 body
 
-	overflow-y: scroll
 	background: var(--color-background)
 	color: var(--color-text)
-	font-family: 'IBM Plex Sans', sans-serif
+	font-family: roboto
 	margin: 0
 	padding: 0
-	font-size: 18px
-	line-height: 1.6
+	font-size: 16px
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
 	-webkit-text-stroke: 0.45px
 	-webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.1)
 
+	@media screen and ( max-width: 500px )
+
+		font-size: 14px
+
 h1, h2, h3, h4, h5
 
-	font-weight: 100
+	font-weight: 500
 	line-height: 1.2
-	margin-bottom: 2rem
+	maring-top: 0
+	margin-bottom: 0.75em
 
 h1
 
@@ -59,23 +71,77 @@ h2
 
 	font-size: 2rem
 
-h3, h4, h5
+h3
 
-	font-size: 1.2rem
+	font-size: 1.75rem
+
+h4
+
+	font-size: 1.5rem
+
+h5
+
+	font-size: 1.25rem
+
+h6
+
+	font-size: 1rem
+
+:global(.displayHeading)
+
+	font-weight: 100
+
+:global(h1.displayHeading)
+
+	font-size: 2.5rem
+	font-size: 5rem
+
+:global(h2.displayHeading)
+
+	font-size: 2rem
+	font-size: 4.5rem
+
+:global(h3.displayHeading)
+
+	font-size: 1.75rem
+	font-size: 4rem
+
+:global(h4.displayHeading)
+
+	font-size: 1.5rem
+	font-size: 3.5rem
+
+:global(h5.displayHeading)
+
+	font-size: 1.25rem
+	font-size: 3rem
+
+:global(h6.displayHeading)
+
+	font-size: 1rem
+	font-size: 2.5rem
 
 a
 
 	color: var(--color-links)
 	text-decoration: none
 
-	&:link, &:visited, &:hover
+	&:link, &:visited
 
 		color: var(--color-links)
 		text-decoration: none
 
+	&:hover, &:focus
+
+		color: var(--color-links)
+		text-decoration: underline
+		text-decoration-color: var(--color-links)
+
 p, ol, ul
 
-	margin-bottom: 2rem
+	margin-top: 0
+	margin-bottom: 1rem
+	line-height: 1.5
 
 p, td, li
 
@@ -88,4 +154,4 @@ ol, ul
 
 strong
 
-	font-weight: 600
+	font-weight: 400
