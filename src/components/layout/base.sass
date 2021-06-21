@@ -14,6 +14,7 @@
 	--color-yellow: #F9C74F
 	--color-green: #32A143
 	--color-green: #038216
+
 	// utility
 
 	--color-blue-text: #fff
@@ -22,6 +23,9 @@
 	--color-green-text: #fff
 	--color-green-link: #fff5b3
 	--color-green-lines: #ffffff40
+	--color-island: #1F1D2A
+
+	// Screen sizing
 
 	--var-screen-padding-small: 20px
 	--var-screen-padding-large: 60px
@@ -33,10 +37,11 @@
 
 	// base
 
-	--color-text: #335
-	--color-text-soft: #737373
-	--color-links: var(--color-blue)
-	--color-lines: #f5f5f5
+	--color-text: #fff
+	--color-text-soft: #8f91ac
+	--color-links: #84beff
+	--color-lines: #3c3e5a
+	--color-background: #191923
 
 html,
 body
@@ -46,7 +51,7 @@ body
 	font-family: roboto
 	margin: 0
 	padding: 0
-	font-size: 16px
+	font-size: 18px
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
 	-webkit-text-stroke: 0.45px
@@ -63,59 +68,85 @@ h1, h2, h3, h4, h5
 	maring-top: 0
 	margin-bottom: 0.75em
 
-h1
+h1,
+:global(.h1)
 
 	font-size: 2.5rem
 
-h2
+h2,
+:global(.h2)
 
 	font-size: 2rem
 
-h3
+h3,
+:global(.h3)
 
 	font-size: 1.75rem
+	border-left: .25em solid var(--color-yellow)
+	padding: 0 0 0 .5em
 
-h4
+h4,
+:global(.h4)
 
 	font-size: 1.5rem
+	border-left: .25em solid var(--color-yellow)
+	padding: 0 0 0 .5em
 
-h5
+h5,
+:global(.h5)
 
 	font-size: 1.25rem
+	border: none
+	padding: 0
 
-h6
+h6,
+:global(.h6)
 
 	font-size: 1rem
+	border: none
+	padding: 0
 
-:global(.displayHeading)
+:global(.displayHeading),
+:global(.displayHeading1),
+:global(.displayHeading2),
+:global(.displayHeading3),
+:global(.displayHeading4),
+:global(.displayHeading5),
+:global(.displayHeading6)
 
 	font-weight: 100
 
+:global(.displayHeading1),
 :global(h1.displayHeading)
 
 	font-size: 2.5rem
 	font-size: 5rem
 
+:global(.displayHeading2),
 :global(h2.displayHeading)
 
 	font-size: 2rem
 	font-size: 4.5rem
 
+:global(.displayHeading3),
 :global(h3.displayHeading)
 
 	font-size: 1.75rem
 	font-size: 4rem
 
+:global(.displayHeading4),
 :global(h4.displayHeading)
 
 	font-size: 1.5rem
 	font-size: 3.5rem
 
+:global(.displayHeading5),
 :global(h5.displayHeading)
 
 	font-size: 1.25rem
 	font-size: 3rem
 
+:global(.displayHeading6),
 :global(h6.displayHeading)
 
 	font-size: 1rem
@@ -137,16 +168,17 @@ a
 		text-decoration: underline
 		text-decoration-color: var(--color-links)
 
-p, ol, ul
+p, ol, ul, address
 
 	margin-top: 0
 	margin-bottom: 1rem
 	line-height: 1.5
 
-p, td, li
+p, td, li, address
 
 	letter-spacing: -.004em
 	font-weight: 300
+	font-style: normal
 
 ol, ul
 
@@ -155,3 +187,31 @@ ol, ul
 strong
 
 	font-weight: 400
+
+// Forms
+
+label,
+input
+
+	display: block
+
+label
+
+	padding-bottom: 1rem
+
+input
+
+	appearance: none
+	border: 2px solid var(--color-green)
+	width: 100%
+	border-radius: .25rem
+	padding: .5rem
+	font-size: 1.2rem
+	background: #09090d
+	color: var(--color-text)
+
+	&::placeholder
+
+		color: var(--color-text-soft)
+		font-weight: 100
+		font-size: 1rem

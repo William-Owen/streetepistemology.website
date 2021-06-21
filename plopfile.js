@@ -79,6 +79,26 @@ const plopProject = (plop) => {
 		],
 	})
 
+	plop.setGenerator("Glossary term", {
+		description: "Add a Glossary term content item",
+		prompts: [
+
+			{
+				type: "input",
+				name: "title",
+				message: "Term",
+			},
+
+		],
+		actions: [
+			{
+				type: "add",
+				path: `content/glossary-terms/{{createFileName title}}.md`,
+				templateFile: `${templateRoot}/glossaryTerm/glossaryTerm.hbs`,
+			},
+		],
+	})
+
 }
 
 module.exports = plopProject

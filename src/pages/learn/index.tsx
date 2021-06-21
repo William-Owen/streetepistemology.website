@@ -9,7 +9,7 @@ const IndexPage = () => {
 			<Page className={style.leanPage}>
 				<PageHeader heading='Learn Street Epistemology' />
 
-				<h2>Introduction</h2>
+				<h2 className='h3'>Introduction</h2>
 
 				<p>
 					Street Epistemology is about having a conversations that
@@ -25,7 +25,7 @@ const IndexPage = () => {
 					principles will help you get started.{' '}
 				</p>
 
-				<h2>Basic principles</h2>
+				<h2 className='h3'>Basic principles</h2>
 
 				<ol>
 					<li>

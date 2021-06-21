@@ -1,7 +1,6 @@
 import clsx from 'clsx'
 import { Link, graphql } from 'gatsby'
 import React from 'react'
-import Page from '../../components/Page'
 import PageNavigation from '../../components/PageNavigation'
 import PageHeader from '../../components/PageHeader'
 import * as style from './faqs.module.sass'
@@ -33,13 +32,13 @@ const DisplayFAQ = ({ faq }) => {
 
 	return (
 		<section id={id}>
-			<h3>{title}</h3>
+			<h4>{title}</h4>
 
 			<main dangerouslySetInnerHTML={{ __html: html }} />
 
 			{moreInformation && (
 				<aside className={style.moreInformation}>
-					<h4>Also see</h4>
+					<h5>Also see</h5>
 
 					{moreInformation.map((mi) => (
 						<DisplayMoreInformationLink moreInfo={mi} />
@@ -62,6 +61,7 @@ const IndexPage = ({ data }) => {
 			/>
 			<main>
 				<PageNavigation className={style.PageNavigation}>
+					<h3 className='h4'>Questions</h3>
 					{allFaqs.map((faq) => (
 						<DisplayFAQLink faq={faq} />
 					))}

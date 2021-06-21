@@ -171,7 +171,7 @@ const Layout = ({ children }) => {
 			<footer>
 				<div className={style.linksAndCredit}>
 					<nav>
-						<h4>Content</h4>
+						<h4 className='h5'>Content</h4>
 
 						<Link to='/learn'>Learn Street Epistemology</Link>
 						<Link to='/resources'>
@@ -183,7 +183,7 @@ const Layout = ({ children }) => {
 						</a>
 					</nav>
 					<nav>
-						<h4>Social</h4>
+						<h4 className='h5'>Social</h4>
 						<a href={metaData.discordUrl}>
 							Street Epistemology Discord
 						</a>
@@ -198,7 +198,7 @@ const Layout = ({ children }) => {
 						</a>
 					</nav>
 					<nav>
-						<h4>Website</h4>
+						<h4 className='h5'>Website</h4>
 						<a href='mailto:contact@streetepistemology.com'>
 							Contact Street Epistemology International
 						</a>
@@ -222,7 +222,7 @@ const Layout = ({ children }) => {
 						</nav>
 						<div className={style.woCredit}>
 							<WOLogo alt='wo.dev' />
-							<p className={style.websiteCredit}>
+							<p>
 								Website by
 								<br />
 								<a href='https://wo.dev'>wo.dev</a>
@@ -230,7 +230,9 @@ const Layout = ({ children }) => {
 						</div>
 						<div className={style.sei}>
 							<div>
-								<h4>Street Epistemology International</h4>
+								<h4 className='h5'>
+									Street Epistemology International
+								</h4>
 								<p>A 501(c)(3) non-profit organisation.</p>
 								<address>
 									17503 La Cantera Parkway,

@@ -11,14 +11,14 @@
 
 		--var-message-spacing: 100px
 
-	& > header
+	.homepageBanner
 
 		flex-grow: 1
 		text-align: center
 		min-height: 60vh
-		background: #f1f9ff
+		color: #fff
 
-		.messagesContainer
+		.creativeContainer
 
 			display: none
 
@@ -28,15 +28,23 @@
 			justify-content: center
 			background-size: cover
 
-			.messagesContainer
+			.creativeContainer
 
 				display: flex
+				padding: var(--var-message-spacing)
+				flex: 1
+				background-position: 50% 50%
+				background-size: cover
+				background-repeat: no-repeat
+				justify-content: center
+				align-items: center
 
-		div
+				div
 
-			flex: 1
-			background-position: 100% 50%
-			background-size: cover
+					max-width: 80%
+
+		a
+			--color-links: #84beff
 
 		.btnStartLearning
 
@@ -46,19 +54,17 @@
 			border-radius: 10px
 			font-weight: bold
 			margin-right: 20px
-
+			background: var(--color-blue)
+			color: var(--color-blue-text)
 			&:hover
-
-				background: var(--color-blue)
-				color: var(--color-blue-text)
 
 .support
 
 	text-align: center
 	background: var(--color-blue)
-	padding: 35px
+	padding: var(--base-screen-padding-minor) var(--base-screen-padding)
 	color: var(--color-blue-text)
-	text-align: left
+	text-align: center
 
 	p
 
@@ -67,16 +73,12 @@
 
 	a
 
-		color: var(--color-blue-link)
+		--color-links: var(--color-blue-link)
 
 	h3
 
-		display: inline-block
-		font-size: 1.2rem
-		margin: 0
 		border: 0
 		padding: 0
-		font-weight: 700
 
 	svg
 
@@ -86,29 +88,31 @@
 
 	& > div
 
-		max-width: 1400px
 		margin: 0 auto
 		flex-direction: row
-		display: flex
+		display: inline-flex
+		text-align: left
 
 		div
 
-			max-width: 800px
+			max-width: 550px
 
 .heroMessage
 
-	padding: var(--base-screen-padding)
-	max-width: 650px
+	flex: 1
 	text-align: left
 	display: flex
 	justify-content: center
 	align-items: center
 
-	@media screen and ( min-width: 750px )
+	> div
 
-.messagesContainer
+		max-width: 650px
+		padding: var(--base-screen-padding)
 
-	padding: var(--var-message-spacing)
+	.cta
+
+		margin-top: 2rem
 
 .chatPersonA,
 .chatPersonB
@@ -177,14 +181,6 @@
 
 		opacity: 1
 
-.conversationSpace
-
-	max-width: 800px
-	background-size: cover
-	display: flex
-	justify-content: center
-	align-items: center
-
 .seeIt
 
 	text-align: center
@@ -205,17 +201,6 @@
 
 		padding: 30px
 		flex: 1
-
-.heroImage
-
-	background-size: cover
-	background-position: center center
-
-h3
-
-	border-left: .5em solid var(--color-yellow)
-	padding: .2em .2em .2em .5em
-	font-size: 1.5rem
 
 .blog
 

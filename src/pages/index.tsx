@@ -8,7 +8,7 @@ import SEO from '../components/seo.js'
 
 const IndexPage = () => {
 	const [messagesClassName, setMessagesClassName] = useState(
-		style.conversationSpace
+		style.creativeContainer
 	)
 
 	useEffect(() => {
@@ -21,18 +21,17 @@ const IndexPage = () => {
 	const rootClassName = clsx([style.pageHomepage, 'pageHomepage'])
 
 	const doMessages = () => {
-		setMessagesClassName(
-			clsx([style.messagesContainer, style.show, style.conversationSpace])
-		)
+		setMessagesClassName(clsx([style.creativeContainer, style.show]))
 	}
 
 	return (
 		<article className={rootClassName}>
 			<SEO title='Home' />
-			<header>
+
+			<div className={style.homepageBanner}>
 				<div className={style.heroMessage}>
 					<div>
-						<h2 className='displayHeading'>
+						<h2 className='displayHeading4'>
 							Helping others reflect on their ideas.
 						</h2>
 						<p>
@@ -43,10 +42,15 @@ const IndexPage = () => {
 							and open to everyone, learn the tools and start
 							having great conversations.
 						</p>
-						<Link className={style.btnStartLearning} to='/learn'>
-							Start learning
-						</Link>
-						<Link to='/faqs'>Find out more</Link>
+						<div className={style.cta}>
+							<Link
+								className={style.btnStartLearning}
+								to='/learn'
+							>
+								Start learning
+							</Link>
+							<Link to='/faqs'>Find out more</Link>
+						</div>
 					</div>
 				</div>
 				<div
@@ -62,7 +66,7 @@ const IndexPage = () => {
 						</p>
 					</div>
 				</div>
-			</header>
+			</div>
 			<section className={style.support}>
 				<div>
 					<HelpIcon />
@@ -70,12 +74,9 @@ const IndexPage = () => {
 						<h3>Feeling a little lost?</h3>
 						<p>
 							Having conversations that change your views can
-							sometimes leave you feeling a little lost;
-							<br />
-							<Link to='\resources'>
-								we have collected a number of resources that may
-								help
-							</Link>
+							sometimes leave you feeling a little lost. We have
+							collected a number of{' '}
+							<Link to='\resources'>resources that may help</Link>
 						</p>
 					</div>
 				</div>

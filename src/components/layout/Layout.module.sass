@@ -56,9 +56,9 @@ body.scrollLock
 
 		svg.logo
 
-			flex-basis: 60px
+			flex-basis: 45px
 			fill: #888
-			padding-right: 10px
+			margin-right: 2rem
 			display: none
 
 			@media screen and (min-width: 375px)
@@ -67,7 +67,7 @@ body.scrollLock
 
 		a.siteTitle
 
-			color: #111
+			color: var(--color-text)
 			flex-grow: 1
 			text-decoration: none
 
@@ -76,13 +76,12 @@ body.scrollLock
 			font-size: 1.4rem
 			line-height: 1em
 			margin: 0 60px 0 0
-			font-weight: 700
-			letter-spacing: -0.035em
+			letter-spacing: -0.015em
 			text-align: left
 
 			sub
 
-				display: block
+				display: none
 				font-weight: 300
 				font-size: 1rem
 				letter-spacing: 0
@@ -156,7 +155,7 @@ body.scrollLock
 
 					text-align: center
 					margin: 0 10px 0
-					font-size: 0.9rem
+					font-size: 1rem
 
 			.menuIcon
 
@@ -212,16 +211,11 @@ footer
 	padding: 1em
 	text-align: center
 	color: var(--color-text-soft)
-	background: #fafafa
 	font-size: 14px
 
 	@media screen and ( min-width: 600px )
 
 		padding: 2rem
-
-	h4
-
-		color: #888
 
 	.linksAndCredit
 

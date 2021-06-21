@@ -21,7 +21,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({
 			<SEO title={`${heading}`} />
 
 			<header data-testid='PageHeader' className={classNames}>
-				<h1>
+				<h1 className='displayHeading5'>
 					{sectionHeading && <span>{sectionHeading}: </span>}
 					{heading}
 				</h1>

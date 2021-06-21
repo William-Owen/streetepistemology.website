@@ -11,13 +11,12 @@ const IndexPage = () => {
 
 	return (
 		<Page className={rootClassName}>
-			<PageHeader heading='Resources' />
-
-			<p>
-				Weather you have been, affected by Street Epistemology or are
+			<PageHeader
+				heading='Resources'
+				subHeading='Weather you have been, affected by Street Epistemology or are
 				looking to learn more about its practice and ideas; there are a
-				huge number of resources available to you.
-			</p>
+				huge number of resources available to you.'
+			/>
 
 			<main>
 				<PageNavigation>

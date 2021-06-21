@@ -1,5 +1,7 @@
 // const show = (label, obj) => console.info(label, JSON.stringify(obj, null, "\t"))
 
+const path = require("path")
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
 
 	const { createNodeField } = actions
@@ -14,5 +16,17 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 		})
 
 	}
+
+}
+
+exports.onCreatePage = async ({ actions }) => {
+
+	const { createPage } = actions
+
+	createPage({
+		path: "/resources/glossary/:search",
+		matchPath: "/resources/glossary/:search",
+		component: path.resolve("./src/pages/resources/glossary.tsx"),
+	})
 
 }

@@ -8,92 +8,25 @@
 
 		display: flex
 
-	h5
-
-		margin: 0 0 0.5rem 0
-
-	dt
-
-		font-size: 1.5rem
-		margin-bottom: .5rem
-
-		ul
-
-			display: block
-			list-style: none
-			margin: 0
-			padding: 0
-			line-height: .9rem
-			font-size: .9rem
-
-			&::before
-
-				content: "AKA: "
-				font-weight: bold
-
-			li
-
-				display: inline-block
-
-				&:last-child::after
-
-					content: ""
-					margin-right: .5em
-
-				&::after
-
-					content: ","
-					margin-right: .5em
-
-	.termToHighlight
-
-		background: var(--color-yellow)
-
-	dd
-
-		padding-bottom: 2rem
-		margin-bottom: 2rem
-		border-bottom: 1px dashed #ccc
-
-	.productFilter
-
-		padding-bottom: 1rem
-		margin-bottom: 1rem
-		border-bottom: 1px solid var(--color-lines)
-
-		label,
-		input
-
-			display: block
-
-		label
-
-			padding-bottom: 1rem
-
-		input
-
-			appearance: none
-			border: 2px solid var(--color-green)
-			width: 100%
-			border-radius: .25rem
-			padding: .5rem
-			font-size: 1.2rem
-
-			&::placeholder
-
-				color: var(--color-text-soft)
-				font-weight: 100
-				font-size: 1rem
 	a
 
 		padding: 2rem
-		background: #f5f5f5
+		background: var(--color-island)
 		border-radius: .5rem
 
 		p
 
 			color: var(--color-text)
 			margin: 0
+			text-decoration: none
+
+		&:hover
+
+			text-decoration: none
+
+			h5
+
+				text-decoration: underline
 
 	nav
 

@@ -22,6 +22,13 @@ module.exports = {
 			},
 		},
 		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
+				name: `glossaryTerms`,
+				path: `${__dirname}/content/glossary-terms`,
+			},
+		},
+		{
 			resolve: `gatsby-plugin-layout`,
 			options: {
 				component: require.resolve(`./src/components/layout/layout.tsx`),
