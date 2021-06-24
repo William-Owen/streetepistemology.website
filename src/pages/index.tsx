@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useImperativeHandle, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import clsx from 'clsx'
 import { Link } from 'gatsby'
 import imageEarth from '../images/earth.webp'
@@ -9,12 +9,12 @@ const IndexPage = () => {
 
 	const messages = [
 		[
-			'We landed on the moon in 1969',
-			'The moon landings were a NASA hoax'
-		],
-		[
 			'The earth is flat',
 			'The earth is a globe'
+		],
+		[
+			'We landed on the moon in 1969',
+			'The moon landings were a NASA hoax'
 		],
 		[
 			'Global warming is real',
@@ -23,22 +23,13 @@ const IndexPage = () => {
 
 	]
 
-	const [messagesClassName, setMessagesClassName] = useState(
-		style.creativeContainer
-	)
-
-	useEffect(() => {
-		const timer = setTimeout(() => {
-			doMessages()
-		}, 500)
-		return () => clearTimeout(timer)
-	}, [])
-
+	const [messagesClassName, setMessagesClassName] = useState(style.creativeContainer)
 	const rootClassName = clsx([style.pageHomepage, 'pageHomepage'])
-
 	const doMessages = () => {
 		setMessagesClassName(clsx([style.creativeContainer, style.show]))
 	}
+
+	useEffect(() => {doMessages()}, [])
 
 	return (
 		<article className={rootClassName}>
@@ -46,7 +37,6 @@ const IndexPage = () => {
 
 			<div
 				className={style.homepageBanner}
-				// style={{ backgroundImage: `url(${imageSpace})` }}
 			>
 				<div className={style.heroMessage}>
 					<div>
@@ -76,19 +66,18 @@ const IndexPage = () => {
 					style={{ backgroundImage: `url(${imageEarth})` }}
 					className={messagesClassName}
 				>
+
 					<div>
-						{
-							messages.map((message, x)=>(
-								<span key={`${x}-1`}>
-									<p className={style.chatPersonA}>
-										{message[0]}
-									</p>
-									<p className={style.chatPersonB}>
-										{message[1]}
-									</p>
-								</span>
-							))
-						}
+						{messages.map((message, x)=>(
+							<span key={`${x}-1`}>
+								<p style={{transitionDelay: `${x * 1}s`}} className={style.chatPersonA}>
+									{message[0]}
+								</p>
+								<p style={{transitionDelay: `${x * 1 + 0.5}s`}} className={style.chatPersonB}>
+									{message[1]}
+								</p>
+							</span>
+						))}
 
 					</div>
 				</div>
