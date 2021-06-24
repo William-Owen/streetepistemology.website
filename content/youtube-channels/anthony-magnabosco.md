@@ -1,6 +1,7 @@
 ---
 title: Anthony Magnabosco
-channelID: UCocP40a_UvRkUAPLD5ezLIQ
+channelId: UCocP40a_UvRkUAPLD5ezLIQ
+channelUrl: https://www.youtube.com/c/AnthonyMagnabosco210
 channelImage: ./anthony-magnabosco.jpg
 social:
 - service: Twitter

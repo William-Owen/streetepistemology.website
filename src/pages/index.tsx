@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import clsx from 'clsx'
 import { Link } from 'gatsby'
 import imageEarth from '../images/earth.webp'
-import HelpIcon from '../images/help.svg'
+import imageSpace from '../images/space.webp'
 import * as style from './index.module.sass'
 import SEO from '../components/seo.js'
 
@@ -28,7 +28,10 @@ const IndexPage = () => {
 		<article className={rootClassName}>
 			<SEO title='Home' />
 
-			<div className={style.homepageBanner}>
+			<div
+				className={style.homepageBanner}
+				// style={{ backgroundImage: `url(${imageSpace})` }}
+			>
 				<div className={style.heroMessage}>
 					<div>
 						<h2 className='displayHeading4'>
@@ -67,20 +70,6 @@ const IndexPage = () => {
 					</div>
 				</div>
 			</div>
-			<section className={style.support}>
-				<div>
-					<HelpIcon />
-					<div>
-						<h3>Feeling a little lost?</h3>
-						<p>
-							Having conversations that change your views can
-							sometimes leave you feeling a little lost. We have
-							collected a number of{' '}
-							<Link to='\resources'>resources that may help</Link>
-						</p>
-					</div>
-				</div>
-			</section>
 		</article>
 	)
 }

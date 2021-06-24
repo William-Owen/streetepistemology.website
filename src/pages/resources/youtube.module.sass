@@ -1,17 +1,56 @@
+.youTubePage
+
+	max-width: 100%
+
+.channelListing
+
+	display: grid
+	grid-template-columns: repeat(auto-fill,minmax(300px,1fr))
+	grid-gap: 2rem
+
 .youtubeChannel
 
-	display: flex
+	background: var(--color-island)
+	padding: 2rem
 
-	.meta
+	header
+
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-bottom: 1rem
+
+	.channelLink
+
+		padding: .2rem 1rem
+		background: #c4302b
+		color: #fff
+		border-radius: .5rem
+		display: inline-flex
+		justify-content: center
+		align-items: center
+
+		svg
+
+			margin-right: 1rem
+			fill: #fff
+			width: 35px
+
+	h3
 
 		flex: 1
 
+	.meta
+
+		p
+
+			font-size: 0.9rem
+
 	.channelImage
 
-		flex-basis: 200px
-		width: 200px
-		margin-right: 2rem
+		flex-basis: 65px
+		margin-right: 1rem
 
 		> div
 
-			border-radius: 50%
+			border-radius: .5rem
