@@ -1,61 +1,87 @@
+import { graphql } from 'gatsby'
 import React from 'react'
 import Page from '../../components/Page'
 import PageHeader from '../../components/PageHeader'
-import * as style from './resources.module.sass'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import * as style from './youtube.module.sass'
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+	const allChannels = data.allMarkdownRemark.edges
+
 	return (
 		<>
 			<Page>
-				<PageHeader heading='Street Epistemology YouTube' />
+				<PageHeader
+					sectionHeading='Street Epistemology Resources'
+					heading='See it on YouTube'
+					subHeading='YouTube can be a great place to see Street Epistemology in action; and watch some fantastic people having amazing conversations.'
+				/>
+				{allChannels.map(
+					(channel: {
+						node: {
+							frontmatter: {
+								title: string
+								channelImage: any
+							}
+							html: string
+						}
+					}) => {
+						const image = getImage(
+							channel.node.frontmatter.channelImage
+						)
 
-				<div>https://www.youtube.com/user/magnabosco210</div>
-				<div>
-					https://www.youtube.com/channel/UCiWKxPMKUBFjN3Ny_VxpkYw
-				</div>
-				<div>https://www.youtube.com/user/jugglinglessons</div>
-				<div>
-					https://www.youtube.com/channel/UCtShJugohT2eaolubHnIuMg
-				</div>
-				<div>
-					https://www.youtube.com/channel/UCaGAzPm0iExb4I4iq0TCXEw
-				</div>
-				<div>
-					https://www.youtube.com/channel/UCtftwuFFsiXLkzmpWPncd5w
-				</div>
-				<div>
-					https://www.youtube.com/channel/UCRzxNyqE-FHUq7DozWh8sgg
-				</div>
-				<div>
-					https://www.youtube.com/channel/UCaGAzPm0iExb4I4iq0TCXEw
-				</div>
-				<div>
-					https://www.youtube.com/channel/UCtftwuFFsiXLkzmpWPncd5w
-				</div>
-				<div>
-					https://www.youtube.com/channel/UCRzxNyqE-FHUq7DozWh8sgg
-				</div>
-				<div>
-					https://www.youtube.com/channel/UCuFOqi7YRgy4HqU-JPNHkZQ
-				</div>
-				<div>
-					https://www.youtube.com/channel/UCQU9GcG93HyDa4oV_TbO9vQ
-				</div>
-				<div>
-					https://www.youtube.com/channel/UCsZjp43nzEtZ8gDjXeu_EUg
-				</div>
-				<div>
-					https://www.youtube.com/channel/UCRDZaUGlD_auyPHJyVoslMw
-				</div>
-				<div>https://www.youtube.com/c/SeedsofThoughtSE</div>
-				<div>https://www.youtube.com/c/SuperCurious/about</div>
-				<div>https://www.youtube.com/c/SocratesJones214/about</div>
-				<div>
-					https://www.youtube.com/channel/UCihh83bKnN6PsHddHPLu10w
-				</div>
+						return (
+							<div className={style.youtubeChannel}>
+								<div className={style.channelImage}>
+									<GatsbyImage
+										image={image}
+										alt={channel.node.frontmatter.title}
+									/>
+								</div>
+								<div className={style.meta}>
+									<h3>{channel.node.frontmatter.title}</h3>
+									<div
+										dangerouslySetInnerHTML={{
+											__html: channel.node.html,
+										}}
+									/>
+								</div>
+							</div>
+						)
+					}
+				)}
 			</Page>
 		</>
 	)
 }
+
+export const pageQuery = graphql`
+	{
+		allMarkdownRemark(
+			filter: { fields: { source: { eq: "youtube-channels" } } }
+			sort: { order: ASC, fields: frontmatter___title }
+		) {
+			edges {
+				node {
+					id
+					html
+					frontmatter {
+						title
+						channelImage {
+							childImageSharp {
+								gatsbyImageData(
+									width: 200
+									height: 200
+									placeholder: BLURRED
+									formats: [AUTO, WEBP, AVIF]
+								)
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+`
 
 export default IndexPage

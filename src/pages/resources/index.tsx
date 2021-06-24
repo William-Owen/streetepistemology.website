@@ -38,14 +38,14 @@ const IndexPage = () => {
 							they are very useful to notice none the less.
 						</p>
 					</Link> */}
-					{/* <Link to='/resources/youtube'>
+					<Link to='/resources/youtube'>
 						<h5>YouTube Channels</h5>
 						<p>
 							YouTube can be a great place to see Street
 							Epistemology in action; and watch some fantastic
 							people having amazing conversations.
 						</p>
-					</Link> */}
+					</Link>
 					{/* <Link to='/resources/books'>
 						<h5>Recommended Books</h5>
 						<p>

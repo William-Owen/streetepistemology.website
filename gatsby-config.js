@@ -24,6 +24,13 @@ module.exports = {
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
+				name: `youtube-channels`,
+				path: `${__dirname}/content/youtube-channels`,
+			},
+		},
+		{
+			resolve: `gatsby-source-filesystem`,
+			options: {
 				name: `glossaryTerms`,
 				path: `${__dirname}/content/glossary-terms`,
 			},
