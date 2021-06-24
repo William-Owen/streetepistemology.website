@@ -18,11 +18,12 @@
 		min-height: 60vh
 		color: #fff
 		background-repeat: repeat
-
 		background: #000000
 		border-radius: 2rem
 		margin: 0 2rem 2rem 2rem
 		background-image: radial-gradient(circle at 80% 50%,#0b2961, #00042c)
+		border: 1px solid #061342
+		box-shadow: 0px 0 20px #00000066
 		background-position: 50% 90%
 
 		.creativeContainer
@@ -63,50 +64,6 @@
 			background: var(--color-blue)
 			color: var(--color-blue-text)
 
-// .support
-
-// 	text-align: center
-// 	background: #E0EAFC
-// 	border-top: 1px solid #3A91DC
-// 	border-bottom: 1px solid #3A91DC
-// 	text-shadow: 2px 2px 3px #00000055
-// 	background: radial-gradient(circle farthest-side, #3A91DC, var(--color-blue))
-// 	background-position: top center
-// 	padding: var(--base-screen-padding-minor) var(--base-screen-padding)
-// 	color: var(--color-blue-text)
-// 	text-align: center
-
-// 	p
-
-// 		margin: 0
-// 		font-size: 16px
-
-// 	a
-
-// 		--color-links: var(--color-blue-link)
-
-// 	h3
-
-// 		border: 0
-// 		padding: 0
-
-// 	svg
-
-// 		width: 60px
-// 		fill: #fff
-// 		margin: 0 30px 0 0
-
-// 	& > div
-
-// 		margin: 0 auto
-// 		flex-direction: row
-// 		display: inline-flex
-// 		text-align: left
-
-// 		div
-
-// 			max-width: 550px
-
 .heroMessage
 
 	flex: 1
@@ -125,130 +82,69 @@
 		margin-top: 2rem
 		text-shadow: none
 
-.chatPersonA,
-.chatPersonB
-
-	opacity: 0
-	transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out
-	padding: 20px
-	display: inline-block
-	border-radius: 5px
-	margin: 10px 40px
-	font-size: 1.2rem
-	font-weight: 400
-	box-shadow: 4px 4px 10px rgba(#000,0.6)
-	position: relative
-	color: #fff
-
-	&:after
-
-		content: ''
-		position: absolute
-		bottom: 0
-		left: 10%
-		width: 0
-		height: 0
-		border: 16px solid transparent
-		border-bottom: 0
-		margin-bottom: -16px
-
-.chatPersonA
-
-	text-align: left
-	background: var(--color-blue)
-	transform: translate3d(var(--var-message-spacing-negative), 20px, 0)
-
-	&:after
-
-		border-top-color: var(--color-blue)
-		border-left: 0
-		margin-right: -8px
-
-.chatPersonB
-
-	text-align: right
-	transition-delay: 0.3s
-	background: var(--color-green)
-	transform: translate3d(var(--var-message-spacing), 20px, 0)
-
-	&:after
-
-		left: 90%
-		border-top-color: var(--color-green)
-		border-right: 0
-		margin-left: -8px
-
-.show
-
-	.chatPersonA
-
-		transform: translate3d(var(--var-message-spacing-negative),0,0)
-
-	.chatPersonB
-
-		transform: translate3d(var(--var-message-spacing),0,0)
+.creativeContainer
 
 	p
 
-		opacity: 1
+		opacity: 0
+		transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out
+		padding: 20px
+		display: inline-block
+		border-radius: 5px
+		margin: 10px 40px
+		font-size: 1.2rem
+		font-weight: 400
+		box-shadow: 4px 4px 10px rgba(#000,0.6)
+		position: relative
+		color: #fff
 
-.seeIt
+		&:after
 
-	text-align: center
-	padding: 60px
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 10%
+			width: 0
+			height: 0
+			border: 16px solid transparent
+			border-bottom: 0
+			margin-bottom: -16px
 
-	p
+		&:nth-child(odd)
 
-		margin: 0
+			text-align: left
+			background: var(--color-blue)
+			transform: translate3d(var(--var-message-spacing-negative), 20px, 0)
 
-	> div
+			&:after
 
-		display: flex
-		flex-direction: row
-		justify-content: center
-		align-items: center
+				border-top-color: var(--color-blue)
+				border-left: 0
+				margin-right: -8px
 
-	> div
+		&:nth-child(even)
 
-		padding: 30px
-		flex: 1
+			text-align: right
+			background: var(--color-green)
+			transform: translate3d(var(--var-message-spacing), 20px, 0)
 
-.blog
+			&:after
 
-	font-size: 0.8rem
+				left: 90%
+				border-top-color: var(--color-green)
+				border-right: 0
+				margin-left: -8px
 
-	.mainImage
-
-		margin-bottom: 20px
-
-	h1
-
-		font-size: 1.3rem
-		margin: 0 0 .4rem 0
-
-	.author
-
-		display: inline
-
-	.meta
-
-		font-size: 0.8rem
-		margin: 0 0 20px 0
+	&.show
 
 		p
 
-			margin: 0 0 5px 0
+			opacity: 1
 
-	.tags
+			&:nth-child(odd)
 
-		display: block
-		margin: 0
-		padding: 0
+				transform: translate3d(var(--var-message-spacing-negative),0,0)
 
-		li
+			&:nth-child(even)
 
-			background: #eee
-			border-radius: 6px
-			display: inline-block
-			padding: 2px 8px
-			margin-right: 10px
+				transform: translate3d(var(--var-message-spacing),0,0)

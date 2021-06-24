@@ -46,8 +46,11 @@
 html,
 body
 
-	background: var(--color-background)
-	background-image: radial-gradient(circle at 50% 0%,#182c4e, #10111f)
+	background: #10111f
+	background-image: radial-gradient(ellipse at 50% 0%,#182c4e, #10111f)
+	background-size: 100% 100vh
+	background-repeat: no-repeat
+	background-attachment: fixed
 	color: var(--color-text)
 	font-family: roboto
 	margin: 0
@@ -203,12 +206,12 @@ label
 input
 
 	appearance: none
-	border: 2px solid var(--color-green)
+	border: 3px solid var(--color-green)
 	width: 100%
 	border-radius: .25rem
-	padding: .5rem
+	padding: .75rem
 	font-size: 1.2rem
-	background: #09090d
+	background: #0f1b2f
 	color: var(--color-text)
 
 	&::placeholder

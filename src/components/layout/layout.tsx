@@ -67,12 +67,15 @@ const Layout = ({ children }) => {
 					<Link onClick={handelMenuLinkClick} to='/learn'>
 						Learn
 					</Link>
-					<Link onClick={handelMenuLinkClick} to='/resources'>
-						Resources
-					</Link>
-					<Link onClick={handelMenuLinkClick} to='/communities'>
-						Communities
-					</Link>
+					<div>
+						<span>
+							Resources
+						</span>
+						<nav>
+							<Link to='/resources/glossary'>Glossary</Link>
+							<Link to='/resources/youtube'>YouTube Channels</Link>
+						</nav>
+					</div>
 					<Link onClick={handelMenuLinkClick} to='/faqs'>
 						FAQs
 					</Link>
@@ -134,20 +137,6 @@ const Layout = ({ children }) => {
 							even if its hard to see.
 						</div>
 					</Link>
-				</nav>
-				<nav>
-					<h3>Resources</h3>
-					<Link to='/resources/glossary'>Glossary</Link>
-					<Link to='/resources/faqs'>Frequently Asked Questions</Link>
-					<Link to='/resources/fallacies'>
-						Common Logical Fallacies
-					</Link>
-					<Link to='/resources/youtube'>YouTube Channels</Link>
-					<Link to='/resources/books'>Recommended Books</Link>
-					<Link to='/resources/support'>
-						Mental health and support
-					</Link>
-					<Link to='/resources/websites'>Useful Websites</Link>
 				</nav>
 				<nav>
 					<h3>Communities</h3>

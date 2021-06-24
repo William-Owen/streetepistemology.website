@@ -105,6 +105,10 @@ body.scrollLock
 			display: none
 			z-index: 10000
 
+			> div
+
+				position: relative
+
 			a
 
 				--color-links: var(--color-green-tex)
@@ -115,7 +119,6 @@ body.scrollLock
 
 		.menuIcon
 
-			// width: 35px
 			z-index: 10010
 			position: absolute
 			top: 10px
@@ -143,19 +146,72 @@ body.scrollLock
 				height: auto
 				width: auto
 				position: relative
-				top: 0
-				left: 0
 				justify-content: flex-end
 				align-items: flex-end
 				flex-direction: row
 
+				nav
+
+					align-content: flex-start
+					background: #fff
+					border-radius: 1rem
+					box-shadow: 0 0 20px #00000088
+					display: none
+					flex-direction: column
+					justify-content: flex-start
+					left: 50%
+					padding: 1rem
+					position: absolute
+					top: 100%
+					transform: translateX(-50%)
+					width: 220px
+
+					a
+
+						width: 100%
+						text-align: left
+						color: #444
+						margin: 0
+						border-bottom: 1px dashed #eee
+
+						&:last-child
+
+							border: none
+
+				span,
 				a
 
 					--color-links: var(--color-text)
-
+					display: block
 					text-align: center
 					margin: 0 10px 0
 					font-size: 1rem
+					padding: .5rem .75rem
+					border-radius: 0.5rem
+
+					&:hover
+
+						background: #fff
+						color: #141e36
+
+				div
+
+					position: relative
+					top: 1rem
+					padding-bottom: 1rem
+
+					&:hover
+
+						span
+
+							z-index: 10000
+							background: #fff
+							color: #141e36
+
+						nav
+
+							display: flex
+							z-index: 10
 
 			.menuIcon
 
