@@ -1,14 +1,19 @@
 import React from 'react'
 import Page from '../../components/Page'
 import PageHeader from '../../components/PageHeader'
-import * as style from './resources.module.sass'
 
 const IndexPage = () => {
 	return (
 		<>
 			<Page>
-				<PageHeader heading='Street Epistemology Websites' />
-				<p>tRUPH BOAMBBBS</p>
+				<PageHeader
+					sectionHeading='Street Epistemology Resources'
+					heading='Useful Websites'
+					subHeading={`There are a lot of amazing websites and resources
+					that might be useful to our community and those
+					interested in leaning more about the many topics
+					encountered in and by Street Epistemology.`}
+				/>
 			</Page>
 		</>
 	)
