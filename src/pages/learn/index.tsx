@@ -15,7 +15,7 @@ const IndexPage = () => {
 					Street Epistemology is about having a conversations that
 					help others honestly reflect on the ideas they hold.
 					Specifically, it is about encouraging reflection on their
-					Epistemology; the reasons and methods they have used to
+					epistemology; the reasons and methods they have used to
 					arrive at knowledge.
 				</p>
 				<p>
@@ -47,7 +47,7 @@ const IndexPage = () => {
 						<strong>Empathy:</strong> Everyone comes to a
 						conversation with different perspectives and
 						expediences. Notice that you may not agree but that
-						doesn't mean
+						doesn't mean you are in opposition.
 					</li>
 					<li>
 						<strong>Question:</strong> Ask don't tell; avoid the

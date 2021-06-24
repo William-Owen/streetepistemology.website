@@ -89,14 +89,14 @@ body.scrollLock
 				line-height: 1em
 				color: var(--color-text-soft)
 
-		nav
+		> nav
 
 			position: absolute
 			top: 0
 			left: 0
 			height: 100vh
 			width: 100vw
-			background: var(--color-green)
+			background: #070810
 			flex-grow: 1
 			display: flex
 			flex-direction: column
@@ -105,17 +105,26 @@ body.scrollLock
 			display: none
 			z-index: 10000
 
+			nav
+
+				flex-direction: column
+
 			> div
 
 				position: relative
 
+			span
+
+				display: none
+
 			a
 
-				--color-links: var(--color-green-tex)
+				--color-links: var(--color-green-text)
 
 				font-size: 2rem
 				font-weight: 400
 				text-align: center
+				padding: 0.5rem
 
 		.menuIcon
 
@@ -128,9 +137,14 @@ body.scrollLock
 			width: 60px
 			padding: 15px
 			overflow: visible
-			background: white
+			fill: white
 
 		&.menuOpen
+
+			.menuIcon
+
+				fill: black
+				background: white
 
 			nav
 
