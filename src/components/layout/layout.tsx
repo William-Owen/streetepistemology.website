@@ -64,16 +64,71 @@ const Layout = ({ children }) => {
 					</h1>
 				</Link>
 				<nav ref={primaryNavigationRef}>
-					<Link onClick={handelMenuLinkClick} to='/learn'>
-						Learn
-					</Link>
 					<div>
-						<span>
-							Resources
-						</span>
+						<span>Learn</span>
+						<nav>
+							<Link onClick={handelMenuLinkClick} to='/learn'>
+								Getting started
+							</Link>
+							<Link
+								onClick={handelMenuLinkClick}
+								to='/learn/rapport'
+							>
+								Rapport
+							</Link>
+							<Link
+								onClick={handelMenuLinkClick}
+								to='/learn/collaborate'
+							>
+								Collaborate
+							</Link>
+							<Link
+								onClick={handelMenuLinkClick}
+								to='/learn/listen'
+							>
+								Listen
+							</Link>
+							<Link
+								onClick={handelMenuLinkClick}
+								to='/learn/empathy'
+							>
+								Empathy
+							</Link>
+							<Link
+								onClick={handelMenuLinkClick}
+								to='/learn/question'
+							>
+								Question
+							</Link>
+							<Link
+								onClick={handelMenuLinkClick}
+								to='/learn/progress'
+							>
+								Progress
+							</Link>
+							<Link
+								onClick={handelMenuLinkClick}
+								to='/learn/further-reading'
+							>
+								Further reading
+							</Link>
+						</nav>
+					</div>
+
+					<div>
+						<span>Resources</span>
 						<nav>
 							<Link to='/resources/glossary'>Glossary</Link>
-							<Link to='/resources/youtube'>YouTube Channels</Link>
+							<Link to='/resources/youtube'>
+								YouTube Channels
+							</Link>
+							<Link to='/resources/fallacies'>
+								Common fallacies
+							</Link>
+							<Link to='/resources/communities'>Communities</Link>
+							<Link to='/resources/websites'>Websites</Link>
+							<Link to='/resources/books'>Books</Link>
+							<Link to='/resources/support'>Support groups</Link>
 						</nav>
 					</div>
 					<Link onClick={handelMenuLinkClick} to='/faqs'>

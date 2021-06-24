@@ -1,5 +1,5 @@
-import { graphql } from 'gatsby'
 import React from 'react'
+import { graphql } from 'gatsby'
 import Page from '../../components/Page'
 import PageHeader from '../../components/PageHeader'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
@@ -26,6 +26,7 @@ const IndexPage = ({ data }) => {
 									title: string
 									channelUrl: string
 									channelImage: any
+									shortDescription: string
 								}
 								html: string
 							}
@@ -52,11 +53,12 @@ const IndexPage = ({ data }) => {
 									</header>
 
 									<div className={style.meta}>
-										<div
-											dangerouslySetInnerHTML={{
-												__html: channel.node.html,
-											}}
-										/>
+										<p>
+											{
+												channel.node.frontmatter
+													.shortDescription
+											}
+										</p>
 										<a
 											className={style.channelLink}
 											href={
@@ -91,6 +93,7 @@ export const pageQuery = graphql`
 					frontmatter {
 						title
 						channelUrl
+						shortDescription
 						channelImage {
 							childImageSharp {
 								gatsbyImageData(

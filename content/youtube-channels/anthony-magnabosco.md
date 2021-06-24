@@ -3,6 +3,7 @@ title: Anthony Magnabosco
 channelId: UCocP40a_UvRkUAPLD5ezLIQ
 channelUrl: https://www.youtube.com/c/AnthonyMagnabosco210
 channelImage: ./anthony-magnabosco.jpg
+shortDescription: Hundreds of Street Epistemology examples on dozens of topics.
 social:
 - service: Twitter
   url: https://twitter.com/magnabosco

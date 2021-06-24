@@ -1,12 +1,11 @@
 import React from 'react'
 import Page from '../../components/Page'
 import PageHeader from '../../components/PageHeader'
-import * as style from './communities.module.sass'
 
 const IndexPage = () => {
 	return (
 		<>
-			<Page className={style.communities}>
+			<Page>
 				<PageHeader heading='Communities' />
 				<h2>Online</h2>
 				<div>
@@ -19,7 +18,6 @@ const IndexPage = () => {
 					</div>
 					<div>
 						<h2>Facebook</h2>
-						<p></p>
 					</div>
 					<div>
 						<h2>Reddit</h2>

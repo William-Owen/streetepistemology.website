@@ -14,6 +14,35 @@ const IndexPage = () => {
 					interested in leaning more about the many topics
 					encountered in and by Street Epistemology.`}
 				/>
+
+				<ul>
+					<li>
+						<a href='https://plato.stanford.edu/'>
+							Stanford Encyclopedia of Philosophy
+						</a>
+					</li>
+					<li>
+						<a href='https://iep.utm.edu/'>
+							The Internet Encyclopedia of Philosophy (IEP)
+						</a>
+					</li>
+					<li>
+						<a href='https://www.f.com/'>Early Modern Texts</a>
+					</li>
+					<li>
+						<a href='https://rationalwiki.org/'>Rational Wiki</a>
+					</li>
+					<li>
+						<a href='http://www.socraticmethod.net/'>
+							Socratic Method Research Portal
+						</a>
+					</li>
+					<li>
+						<a href='https://motivationalinterviewing.org/mi-guidance-documents'>
+							Motivational Interviewing
+						</a>
+					</li>
+				</ul>
 			</Page>
 		</>
 	)

@@ -3,6 +3,7 @@ title: Let's Chat
 channelId: UCtShJugohT2eaolubHnIuMg
 channelUrl: https://www.youtube.com/channel/UCtShJugohT2eaolubHnIuMg
 channelImage: ./lets-chat.jpg
+shortDescription: Tyrone strives to demonstrate that people can have productive chats about anything.
 ---
 Hello, I'm Ty, and I'm working on a way  to talk to anyone about anything.
 
