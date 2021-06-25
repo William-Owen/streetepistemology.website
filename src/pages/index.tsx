@@ -6,42 +6,40 @@ import * as style from './index.module.sass'
 import SEO from '../components/seo.js'
 
 const IndexPage = () => {
-
 	const messages = [
+		['The earth is flat.', 'The earth is a globe.'],
 		[
-			'The earth is flat',
-			'The earth is a globe'
+			'We landed on the moon in 1969.',
+			'The moon landings were a NASA hoax.',
 		],
 		[
-			'We landed on the moon in 1969',
-			'The moon landings were a NASA hoax'
+			'Global warming is a real concern.',
+			`Global warming isn't real, its a capitalist hoax!`,
 		],
-		[
-			'Global warming is real',
-			`Global warming isn't real, its a capitalist host!`
-		]
-
+		['The Earth is 6000 years old.', `The Earth is 4.5 billion years old!`],
 	]
 
-	const [messagesClassName, setMessagesClassName] = useState(style.creativeContainer)
+	const [messagesClassName, setMessagesClassName] = useState(
+		style.creativeContainer
+	)
 	const rootClassName = clsx([style.pageHomepage, 'pageHomepage'])
 	const doMessages = () => {
 		setMessagesClassName(clsx([style.creativeContainer, style.show]))
 	}
 
-	useEffect(() => {doMessages()}, [])
+	useEffect(() => {
+		doMessages()
+	}, [])
 
 	return (
 		<article className={rootClassName}>
 			<SEO title='Home' />
 
-			<div
-				className={style.homepageBanner}
-			>
+			<div className={style.homepageBanner}>
 				<div className={style.heroMessage}>
 					<div>
 						<h2 className='displayHeading4'>
-							Helping others reflect on their ideas.
+							Helping others reflect on their ideas
 						</h2>
 						<p>
 							Ideas shape our world, but sometimes talking about
@@ -66,19 +64,25 @@ const IndexPage = () => {
 					style={{ backgroundImage: `url(${imageEarth})` }}
 					className={messagesClassName}
 				>
-
 					<div>
-						{messages.map((message, x)=>(
+						{messages.map((message, x) => (
 							<span key={`${x}-1`}>
-								<p style={{transitionDelay: `${x * 1}s`}} className={style.chatPersonA}>
+								<p
+									style={{ transitionDelay: `${x * 1}s` }}
+									className={style.chatPersonA}
+								>
 									{message[0]}
 								</p>
-								<p style={{transitionDelay: `${x * 1 + 0.5}s`}} className={style.chatPersonB}>
+								<p
+									style={{
+										transitionDelay: `${x * 1 + 0.5}s`,
+									}}
+									className={style.chatPersonB}
+								>
 									{message[1]}
 								</p>
 							</span>
 						))}
-
 					</div>
 				</div>
 			</div>
