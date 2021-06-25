@@ -21,6 +21,9 @@ const IndexPage = () => {
 					<li>
 						<a href='https://www.samaritans.org/'>Samaritans</a>
 					</li>
+					<li>
+						<a href='https://www.healthygamer.gg/'>Healthy Gamer</a>
+					</li>
 				</ul>
 			</Page>
 		</>
