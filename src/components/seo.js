@@ -45,7 +45,7 @@ const SEO = ({
 				},
 				{
 					property: `og:title`,
-					content: title,
+					content: `${title} | Street Epistemology`,
 				},
 				{
 					property: `og:description`,
@@ -65,7 +65,7 @@ const SEO = ({
 				},
 				{
 					name: `twitter:title`,
-					content: title,
+					content: `${title} | Street Epistemology`,
 				},
 				{
 					name: `twitter:description`,
