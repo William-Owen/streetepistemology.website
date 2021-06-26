@@ -26,7 +26,6 @@ const IndexPage = () => {
 	return (
 		<article className={rootClassName}>
 			<SEO title="Home" />
-
 			<div className={style.homepageBanner}>
 				<div className={style.heroMessage}>
 					<div>

@@ -100,8 +100,8 @@ const IndexPage = ({ data }) => {
 			<PageHeader
 				sectionHeading='Street Epistemology Resources'
 				heading='Glossary of terms'
-				subHeading='The purpose of this glossary is to provide practical
-				descriptions of terms frequently encountered in Street
+				subHeading='The purpose of this glossary is to provide short practical
+				descriptions of names and terms frequently encountered in Street
 				Epistemology groups, communities and discourse. It is not
 				seeking to provide comprehensive, complete or definitive
 				definitions. We hope you find it useful.'

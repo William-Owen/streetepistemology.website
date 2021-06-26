@@ -1,0 +1,47 @@
+.booksPage
+
+	width: 100%
+	max-width: 100%
+
+.bookListing
+
+	display: grid
+	grid-template-columns: repeat(auto-fill,minmax(300px,1fr))
+	grid-gap: 1rem
+
+.books
+
+	background: var(--color-island)
+	padding: 2rem
+
+	p
+
+		margin: 0
+
+	.authors
+
+		span
+
+			margin-right: 0.25em
+
+			&:after
+
+				content: ', '
+
+			&:last-child
+
+				&:after
+
+					content: ''
+
+	h3
+
+		margin-top: 1rem
+		margin-bottom: .5rem
+
+		em
+
+			display: block
+			line-height: 1.2rem
+			font-size: 0.9rem
+			color: var(--color-text-soft)

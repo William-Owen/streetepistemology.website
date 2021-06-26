@@ -7,24 +7,20 @@ const IndexPage = () => {
 		<>
 			<Page>
 				<PageHeader heading='Communities' />
-				<h2>Online</h2>
-				<div>
-					<div>
-						<h2>Discord</h2>
-						<p>
-							Discord is a group chat application, and you are
-							invited to join in the conversation!
-						</p>
-					</div>
-					<div>
-						<h2>Facebook</h2>
-					</div>
-					<div>
-						<h2>Reddit</h2>
-					</div>
-				</div>
-				<h2>Real world</h2>
-				<h2>YouTube</h2>
+
+				<ul>
+
+					<li><a href="https://discord.gg/sKap3zM">https://discord.gg/sKap3zM</a></li>
+					<li><a href="https://www.facebook.com/StreetEpistemology">https://www.facebook.com/StreetEpistemology</a></li>
+					<li><a href="https://www.facebook.com/groups/learnstreetepistemology/">https://www.facebook.com/groups/learnstreetepistemology/</a></li>
+					<li><a href="https://www.facebook.com/groups/ChatWithAStreetEpistemologist/">https://www.facebook.com/groups/ChatWithAStreetEpistemologist/</a></li>
+					<li><a href="https://www.facebook.com/groups/CritiqueStreetEpistemology/">https://www.facebook.com/groups/CritiqueStreetEpistemology/</a></li>
+					<li><a href="https://www.youtube.com/user/StreetEpistemologist/channels">https://www.youtube.com/user/StreetEpistemologist/channels</a></li>
+					<li><a href="https://twitter.com/StEpistemology">https://twitter.com/StEpistemology</a></li>
+					<li><a href="https://www.reddit.com/r/StreetEpistemology/">https://www.reddit.com/r/StreetEpistemology/</a></li>
+
+				</ul>
+
 			</Page>
 		</>
 	)

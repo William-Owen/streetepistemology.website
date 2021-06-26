@@ -3,18 +3,18 @@ import Page from '../../components/Page'
 import PageHeader from '../../components/PageHeader'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import * as style from './books.modules.sass'
+import * as style from './books.module.sass'
 
 const IndexPage = ({ data }) => {
 	const allBooks = data.allMarkdownRemark.edges
 
 	return (
 		<>
-			<Page>
+			<Page className={style.booksPage}>
 				<PageHeader
 					sectionHeading='Street Epistemology Resources'
 					heading='Interesting Books'
-					subHeading={`Here is a collection of book that whilst necessary can certainly add some great background ideas often encountered within Street Epistemology`}
+					subHeading={`A collection of great books that are often referenced or recommended within the Street Epistemology.`}
 				/>
 
 				<div className={style.bookListing}>
@@ -27,16 +27,17 @@ const IndexPage = ({ data }) => {
 									image={image}
 									alt={book.node.frontmatter.title}
 								/>
-								<h3 className='h4'>
+								<h3 className='h5'>
 									{book.node.frontmatter.title}
+									{book.node.frontmatter.subTitle && <em>{book.node.frontmatter.subTitle}</em>}
 								</h3>
-								<p>
+								<div className={style.authors}>by{` `}
 									{book.node.frontmatter.authors.map(
 										(author) => (
 											<span>{author}</span>
 										)
 									)}
-								</p>
+								</div>
 							</div>
 						)
 					})}
@@ -60,6 +61,7 @@ export const pageQuery = graphql`
 					html
 					frontmatter {
 						title
+						subTitle
 						authors
 						coverImage {
 							childImageSharp {
