@@ -1,10 +1,20 @@
-import * as React from 'react'
-import { render, screen } from '@testing-library/react'
-import {{componentName}} from '.'
+import React from 'react'
+import clsx from 'clsx'
+import * as style from './{{componentName}}.module.sass'
 
-describe('Component: {{componentName}}', () => {
-	it('renders', () => {
-		const { container } = render(<{{componentName}} />)
-		expect(container).toBeInTheDocument()
-	})
-})
+interface {{componentName}}Props {
+	children?: React.ReactNode
+	className?: string
+}
+
+const {{componentName}}: React.FC<{{componentName}}Props> = ({ children, className }) => {
+	const rootClassName = clsx([style.page, 'Page', className])
+
+	return (
+		<div data-testid='{{componentName}}' className={rootClassName}>
+			{children}
+		</div>
+	)
+}
+
+export default {{componentName}}

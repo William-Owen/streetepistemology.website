@@ -1,7 +1,9 @@
 import { graphql } from 'gatsby'
 import React from 'react'
+import NavigationLearn from '../../components/navigationLearn'
 import Page from '../../components/Page'
 import PageHeader from '../../components/PageHeader'
+import PageNavigation from '../../components/PageNavigation'
 import * as style from './learn.module.sass'
 
 const IndexPage = ({data}) => {
@@ -12,12 +14,21 @@ const IndexPage = ({data}) => {
 	return (
 
 		<>
+
 			<Page className={style.leanPage}>
+
 				<PageHeader sectionHeading="Learn Street Epistemology" heading={title} />
 
-				<div dangerouslySetInnerHTML={{ __html: content }} />
+				<article>
+
+					<PageNavigation><NavigationLearn /></PageNavigation>
+
+					<main dangerouslySetInnerHTML={{ __html: content }} />
+
+				</article>
 
 			</Page>
+
 		</>
 	)
 }

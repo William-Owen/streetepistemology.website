@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { Link, useStaticQuery, graphql } from 'gatsby';
+import NavigationLearn from '../../components/navigationLearn';
 import * as style from './Layout.module.sass';
 import SELogo from '../../images/street-epistemology-logo-simple-color.inline.svg';
 import WOLogo from '../../images/wo_dev_transparent.svg';
@@ -67,14 +68,7 @@ const Layout = ({ children }) => {
 					<div>
 						<span>Learn</span>
 						<nav onClick={handelMenuLinkClick}>
-							<Link to="/learn">Getting started</Link>
-							<Link to="/learn/rapport">Rapport</Link>
-							<Link to="/learn/collaborate">Collaborate</Link>
-							<Link to="/learn/listen">Listen</Link>
-							<Link to="/learn/empathy">Empathy</Link>
-							<Link to="/learn/question">Question</Link>
-							<Link to="/learn/progress">Progress</Link>
-							<Link to="/learn/further-reading">Further reading</Link>
+							<NavigationLearn />
 						</nav>
 					</div>
 					<div>

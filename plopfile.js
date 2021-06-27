@@ -32,7 +32,7 @@ const plopProject = (plop) => {
 			{
 				type: "add",
 				path: `${componentRoot}/{{componentName}}/{{componentName}}.test.tsx`,
-				templateFile: `${templateRoot}/component/componentName.test.tsx`,
+				templateFile: `${templateRoot}/component/componentName.test.tsx.hbs`,
 			},
 			{
 				type: "add",

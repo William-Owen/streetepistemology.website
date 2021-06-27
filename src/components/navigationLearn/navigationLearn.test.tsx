@@ -1,10 +1,10 @@
 import * as React from 'react'
 import { render, screen } from '@testing-library/react'
-import {{componentName}} from '.'
+import navigationLearn from '.'
 
-describe('Component: {{componentName}}', () => {
+describe('Component: navigationLearn', () => {
 	it('renders', () => {
-		const { container } = render(<{{componentName}} />)
+		const { container } = render(<navigationLearn />)
 		expect(container).toBeInTheDocument()
 	})
 })
