@@ -18,14 +18,17 @@ const IndexPage = () => {
 							Recovering from Religion
 						</a>
 					</li>
-					<li><a href="https://exmuslims.org/join-us/">https://exmuslims.org</a></li>
 					<li>
-						<a href='https://www.samaritans.org/'>Samaritans</a>
+						<a href="https://secularstudents.org/">Secular Student Alliance (US)</a>
+					</li>
+					<li><a href="https://exmuslims.org/">Ex-Muslims of North America (US)</a></li>
+					<li>
+						<a href='https://www.samaritans.org/'>The Samaritans</a>
 					</li>
 					<li>
 						<a href='https://www.healthygamer.gg/'>Healthy Gamer</a>
 					</li>
-					<li><a href="https://www.seculartherapy.org/">https://www.seculartherapy.org/</a></li>
+					<li><a href="https://www.seculartherapy.org/">The Secular Therapy Project</a></li>
 					<li><a href="http://openmindsfoundation.org/">Open Minds Foundation</a>  (International, based in US and UK)</li>
 					<li><a href="http://www.icsahome.com/">International Cultic Studies Association</a>  (International, based in US)</li>
 					<li><a href="http://www.infokatot.com/">Infokatot</a>  (Israel)</li>

@@ -10,7 +10,6 @@ import IconFacebook from '../../images/facebook.inline.svg';
 import IconReddit from '../../images/reddit.inline.svg';
 import IconTwitter from '../../images/twitter.inline.svg';
 import IconMenu from '../../images/menu.inline.svg';
-import IconYouTube from '../../images/youtube.inline.svg';
 
 const Layout = ({ children }) => {
 	const rootClassName = clsx([ style.Layout, 'Layout' ]);
@@ -83,7 +82,6 @@ const Layout = ({ children }) => {
 						<nav onClick={handelMenuLinkClick}>
 							<Link to="/resources/glossary">Glossary</Link>
 							<Link to="/resources/youtube">YouTube Channels</Link>
-							<Link to="/resources/fallacies">Common fallacies</Link>
 							<Link to="/resources/communities">Communities</Link>
 							<Link to="/resources/websites">Websites</Link>
 							<Link to="/resources/books">Books</Link>
