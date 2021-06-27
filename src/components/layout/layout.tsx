@@ -86,6 +86,7 @@ const Layout = ({ children }) => {
 							<Link to="/resources/communities">Communities</Link>
 							<Link to="/resources/websites">Websites</Link>
 							<Link to="/resources/books">Books</Link>
+							<Link to="/resources/podcasts">Podcasts</Link>
 							<Link to="/resources/support">Support groups</Link>
 						</nav>
 					</div>
