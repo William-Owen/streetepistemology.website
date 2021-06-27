@@ -4,8 +4,7 @@ import clsx from 'clsx'
 import * as style from './glossary.module.sass'
 import PageHeader from '../../components/PageHeader'
 import { graphql } from 'gatsby'
-import { useParams } from '@reach/router'
-
+import { highlightTerm, termInString } from "../../modules/searchTools"
 interface glossaryReferences {
 	name: string
 	link: string
@@ -19,14 +18,12 @@ interface glossaryArrayTermInterface {
 }
 
 const IndexPage = ({ data }) => {
+
 	const [filter, setFilter] = useState('')
 	const allTerms = data.allMarkdownRemark.edges
 	const handelInputChange = (e) => setFilter(e.target.value)
 	const rootClassName: string = clsx([style.glossaryPage, 'glossary-page'])
 	const glossaryArray = []
-
-	const params = useParams()
-	console.info(params)
 
 	allTerms.forEach((termItem) => {
 		const term = termItem.node.frontmatter.title
@@ -43,27 +40,16 @@ const IndexPage = ({ data }) => {
 		})
 	})
 
-	// Create the display data, filtering if needed
-
-	const termInString = (searchString: string, sourceString: string) => {
-		searchString = searchString.toString().toLowerCase()
-		sourceString = sourceString.toString().toLowerCase()
-		const searchStringIndex = sourceString.indexOf(searchString)
-
-		return searchStringIndex > -1
-	}
-
 	const glossaryData = filter
 		? glossaryArray.filter((item) => {
-				// Search main term
-				if (termInString(filter, item.term)) {
-					return true
-				}
-
-				// Search AKA terms
-				return item?.aka?.some((akaItem) =>
-					termInString(filter, akaItem)
-				)
+			// Search main term
+			if (termInString(filter, item.term)) {
+				return true
+			}
+			// Search AKA terms
+			return item?.aka?.some((akaItem) =>
+				termInString(filter, akaItem)
+			)
 		  })
 		: glossaryArray
 
@@ -78,22 +64,6 @@ const IndexPage = ({ data }) => {
 		}
 		return 0
 	})
-
-	const highlightTerm = (termToHighlight: string, inString: string) => {
-		const parts = inString.split(new RegExp(`(${termToHighlight})`, 'gi'))
-
-		return parts.map((part, i) => {
-			if (part.toLowerCase() === termToHighlight.toLowerCase()) {
-				return (
-					<span key={i} className={style.termToHighlight}>
-						{part}
-					</span>
-				)
-			}
-
-			return part
-		})
-	}
 
 	return (
 		<Page className={rootClassName}>
@@ -121,15 +91,16 @@ const IndexPage = ({ data }) => {
 			<main>
 				<dl>
 					{glossaryData.map((term) => (
-						<div key={term.id} className={style.term}>
-							<dt>
-								{highlightTerm(filter, term.term)}
 
+						<div key={term.id} className={style.term}>
+
+							<dt>
+								{highlightTerm(filter, term.term, 'termToHighlight')}
 								{term.aka && (
 									<ul>
 										{term.aka.map((akaTerm) => (
 											<li key={akaTerm}>
-												{highlightTerm(filter, akaTerm)}
+												{highlightTerm(filter, akaTerm, 'termToHighlight')}
 											</li>
 										))}
 									</ul>

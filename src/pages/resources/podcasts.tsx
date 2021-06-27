@@ -6,6 +6,7 @@ const IndexPage = () => {
 	return (
 		<>
 			<Page>
+
 				<PageHeader
 					sectionHeading='Street Epistemology Resources'
 					heading='Podcasts'
@@ -18,7 +19,8 @@ const IndexPage = () => {
 					<li><a href="https://samharris.org/podcast/">Making Sense</a></li>
 					<li><a href="https://www.theskepticsguide.org/podcasts">The Skeptics guide to the universe</a></li>
 					<li><a href="https://colemanhughes.org/">Conversations with Coleman</a></li>
-
+					<li><a href="https://www.clearerthinking.org/podcast">Clearer Thinking</a></li>
+					<li><a href="https://www.wnycstudios.org/podcasts/radiolab">Radiolab</a></li>
 				</ul>
 
 			</Page>

@@ -45,9 +45,10 @@ const IndexPage = () => {
 
 						<a href="https://discord.gg/sKap3zM"><IconDiscord /><div>Street Epistemology on Discord</div></a>
 						<a href="https://www.facebook.com/StreetEpistemology"><IconFacebook /><div>Facebook: Street Epistemology</div></a>
-						<a href="https://www.facebook.com/groups/learnstreetepistemology/"><IconFacebook /><div>Facebook: Learn Street Epistemology</div></a>
-						<a href="https://www.facebook.com/groups/ChatWithAStreetEpistemologist/"><IconFacebook /><div>Facebook: Chat With A Street Epistemologist</div></a>
-						<a href="https://www.facebook.com/groups/CritiqueStreetEpistemology/"><IconFacebook /><div>Facebook: Critique Street Epistemology</div></a>
+						<a href="https://www.facebook.com/groups/learnstreetepistemology/"><IconFacebook />Facebook Group: Learn Street Epistemology</a>
+						<a href="https://www.facebook.com/groups/learnstreetepistemology/"><IconFacebook />Facebook Group: Street Epistemology Study Group</a>
+						<a href="https://www.facebook.com/groups/ChatWithAStreetEpistemologist/"><IconFacebook /><div>Facebook Group: Chat With A Street Epistemologist</div></a>
+						<a href="https://www.facebook.com/groups/CritiqueStreetEpistemology/"><IconFacebook /><div>Facebook Group: Critique Street Epistemology</div></a>
 						<a href="https://www.youtube.com/user/StreetEpistemologist/channels"><IconYouTube /><div>YouTube: Street Epistemologist</div> </a>
 						<a href="https://twitter.com/StEpistemology"><IconTwitter /><div>Twitter: StEpistemology</div></a>
 						<a href="https://www.reddit.com/r/StreetEpistemology/"><IconReddit /><div>Reddit /r/StreetEpistemology</div></a>
