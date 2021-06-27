@@ -13,6 +13,7 @@ const IndexPage = ({ data }) => {
 		<>
 			<Page className={style.youTubePage}>
 				<PageHeader
+					className={style.YouTubeHeader}
 					sectionHeading='Street Epistemology Resources'
 					heading='See it on YouTube'
 					subHeading='YouTube can be a great place to see Street Epistemology in action; and watch some fantastic people having amazing conversations.'
@@ -37,39 +38,22 @@ const IndexPage = ({ data }) => {
 
 							return (
 								<div className={style.youtubeChannel}>
+
 									<header>
 										<div className={style.channelImage}>
-											<GatsbyImage
-												image={image}
-												alt={
-													channel.node.frontmatter
-														.title
-												}
-											/>
+											<GatsbyImage image={image} alt={channel.node.frontmatter.title} />
 										</div>
-										<h3 className='h5'>
-											{channel.node.frontmatter.title}
-										</h3>
+										<h3 className='h5'>{channel.node.frontmatter.title}</h3>
 									</header>
 
 									<div className={style.meta}>
-										<p>
-											{
-												channel.node.frontmatter
-													.shortDescription
-											}
-										</p>
-										<a
-											className={style.channelLink}
-											href={
-												channel.node.frontmatter
-													.channelUrl
-											}
-										>
+										<p>{channel.node.frontmatter.shortDescription}</p>
+										<a className={style.channelLink} href={ channel.node.frontmatter.channelUrl}>
 											<YouTubeIcon />
 											Visit the channel
 										</a>
 									</div>
+
 								</div>
 							)
 						}

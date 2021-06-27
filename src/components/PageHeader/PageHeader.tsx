@@ -7,14 +7,20 @@ interface PageHeaderProps {
 	heading: string
 	sectionHeading?: string
 	subHeading?: string
+	className?: string
 }
 
 const PageHeader: React.FC<PageHeaderProps> = ({
 	heading,
 	subHeading,
 	sectionHeading,
+	className,
 }) => {
-	const classNames = clsx([style.PageHeader, 'PageHeader'])
+	const classNames = clsx([
+		className,
+		style.PageHeader,
+		'PageHeader'
+	])
 
 	return (
 		<>
@@ -27,6 +33,7 @@ const PageHeader: React.FC<PageHeaderProps> = ({
 				</h1>
 				{subHeading && <p>{subHeading}</p>}
 			</header>
+
 		</>
 	)
 }

@@ -6,7 +6,8 @@ const IndexPage = () => {
 	return (
 		<>
 			<Page>
-				<PageHeader heading='Communities' />
+
+				<PageHeader sectionHeading='Street Epistemology' heading='Communities' />
 
 				<ul>
 

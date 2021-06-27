@@ -11,33 +11,36 @@ const IndexPage = ({ data }) => {
 	return (
 		<>
 			<Page className={style.booksPage}>
+
 				<PageHeader
+					className={style.booksHeader}
 					sectionHeading='Street Epistemology Resources'
 					heading='Interesting Books'
-					subHeading={`A collection of great books that are often referenced or recommended within the Street Epistemology.`}
+					subHeading={`A collection of books often referenced or recommended within the Street Epistemology community. These books are on a wide range of subjects and a presented here as a reference. The views and opinions expressed in these books are not explicitly the views and options of the Street Epistemology community.`}
 				/>
-
 				<div className={style.bookListing}>
 					{allBooks.map((book) => {
 						const image = getImage(book.node.frontmatter.coverImage)
+						const {title, subTitle, authors, goodReadLink} = book.node.frontmatter
 
 						return (
-							<div className={style.books}>
+							<div className={style.book}>
 								<GatsbyImage
 									image={image}
-									alt={book.node.frontmatter.title}
+									alt={title}
 								/>
 								<h3 className='h5'>
-									{book.node.frontmatter.title}
-									{book.node.frontmatter.subTitle && <em>{book.node.frontmatter.subTitle}</em>}
+									{title}
+									{subTitle && <em>{subTitle}</em>}
 								</h3>
 								<div className={style.authors}>by{` `}
-									{book.node.frontmatter.authors.map(
+									{authors.map(
 										(author) => (
 											<span>{author}</span>
 										)
 									)}
 								</div>
+								{goodReadLink && <a href={goodReadLink}>Find on GoodReads</a>}
 							</div>
 						)
 					})}
@@ -63,6 +66,7 @@ export const pageQuery = graphql`
 						title
 						subTitle
 						authors
+						goodReadLink
 						coverImage {
 							childImageSharp {
 								gatsbyImageData(
