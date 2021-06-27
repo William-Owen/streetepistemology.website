@@ -10,6 +10,7 @@ import IconFacebook from '../../images/facebook.inline.svg';
 import IconReddit from '../../images/reddit.inline.svg';
 import IconTwitter from '../../images/twitter.inline.svg';
 import IconMenu from '../../images/menu.inline.svg';
+import IconYouTube from '../../images/youtube.inline.svg';
 
 const Layout = ({ children }) => {
 	const rootClassName = clsx([ style.Layout, 'Layout' ]);
