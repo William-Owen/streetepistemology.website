@@ -43,15 +43,30 @@ const IndexPage = () => {
 
 						<h3>Online Communities</h3>
 
-						<a href="https://discord.gg/sKap3zM"><IconDiscord /><div>Street Epistemology on Discord</div></a>
-						<a href="https://www.facebook.com/StreetEpistemology"><IconFacebook /><div>Facebook: Street Epistemology</div></a>
-						<a href="https://www.facebook.com/groups/learnstreetepistemology/"><IconFacebook />Facebook Group: Learn Street Epistemology</a>
-						<a href="https://www.facebook.com/groups/learnstreetepistemology/"><IconFacebook />Facebook Group: Street Epistemology Study Group</a>
-						<a href="https://www.facebook.com/groups/ChatWithAStreetEpistemologist/"><IconFacebook /><div>Facebook Group: Chat With A Street Epistemologist</div></a>
-						<a href="https://www.facebook.com/groups/CritiqueStreetEpistemology/"><IconFacebook /><div>Facebook Group: Critique Street Epistemology</div></a>
-						<a href="https://www.youtube.com/user/StreetEpistemologist/channels"><IconYouTube /><div>YouTube: Street Epistemologist</div> </a>
-						<a href="https://twitter.com/StEpistemology"><IconTwitter /><div>Twitter: StEpistemology</div></a>
-						<a href="https://www.reddit.com/r/StreetEpistemology/"><IconReddit /><div>Reddit /r/StreetEpistemology</div></a>
+						<a href="https://discord.gg/sKap3zM"><div>
+							<IconDiscord />
+						</div><div>Street Epistemology on Discord</div></a>
+						<a href="https://www.facebook.com/StreetEpistemology"><div>
+							<IconFacebook />
+						</div><div>Facebook: Street Epistemology</div></a>
+						<a href="https://www.facebook.com/groups/learnstreetepistemology/"><div>
+							<IconFacebook />
+						</div><div>Facebook Group: Learn Street Epistemology</div></a>
+						<a href="https://www.facebook.com/groups/ChatWithAStreetEpistemologist/"><div>
+							<IconFacebook />
+						</div><div>Facebook Group: Chat With A Street Epistemologist</div></a>
+						<a href="https://www.facebook.com/groups/CritiqueStreetEpistemology/"><div>
+							<IconFacebook />
+						</div><div>Facebook Group: Critique Street Epistemology</div></a>
+						<a href="https://www.youtube.com/user/StreetEpistemologist/channels"><div>
+							<IconYouTube />
+						</div><div>YouTube: Street Epistemologist</div> </a>
+						<a href="https://twitter.com/StEpistemology"><div>
+							<IconTwitter />
+						</div><div>Twitter: StEpistemology</div></a>
+						<a href="https://www.reddit.com/r/StreetEpistemology/"><div>
+							<IconReddit />
+						</div><div>Reddit /r/StreetEpistemology</div></a>
 
 					</PageNavigation>
 

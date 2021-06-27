@@ -13,9 +13,8 @@ const IndexPage = ({ data }) => {
 	const handelInputChange = (e) => setFilter(e.target.value)
 
 	const booksFiltered = filter ? allBooks.filter((book) => {
-		// Search main term
 		if (termInString(filter, book.node.frontmatter.title)) { return true }
-		// Search AKA terms
+		if (book.node.frontmatter.subTitle && termInString(filter, book.node.frontmatter.subTitle)) { return true }
 		return book?.node.frontmatter?.authors.some( ( author ) => termInString(filter, author) )
 	})
 	: allBooks
@@ -32,7 +31,9 @@ const IndexPage = ({ data }) => {
 				/>
 
 				<div className={style.bookSearch}>
+
 					<label htmlFor='filter-text'>Find book</label>
+
 					<input
 						id='filter-text'
 						name='filter-text'
@@ -40,38 +41,47 @@ const IndexPage = ({ data }) => {
 						placeholder='Titles and authors here'
 						type='text'
 					/>
+
 				</div>
 
 				<div className={style.bookListing}>
+
 					{booksFiltered.map((book) => {
 
 						const image = getImage(book.node.frontmatter.coverImage)
 						const {title, subTitle, authors, goodReadLink} = book.node.frontmatter
 
 						return (
+
 							<div className={style.book}>
+
 								<GatsbyImage
 									image={image}
 									alt={title}
 								/>
+
 								<h3 className='h5'>
 
 									{title && highlightTerm(filter, title, 'termToHighlight')}
 									{subTitle && <em>{highlightTerm(filter, subTitle, 'termToHighlight')}</em>}
 
 								</h3>
+
 								<div className={style.authors}>by{` `}
 									{authors.map(
 										(author) => {
 											return filter ?
-											 <span>{highlightTerm(filter, author, 'termToHighlight')}</span>
+												<span>{highlightTerm(filter, author, 'termToHighlight')}</span>
 											:
 											<span>{author}</span>
 										}
 									)}
 								</div>
+
 								{goodReadLink && <a href={goodReadLink}>Find on GoodReads</a>}
+
 							</div>
+
 						)
 					})}
 				</div>
