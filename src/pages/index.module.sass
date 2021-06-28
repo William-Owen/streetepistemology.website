@@ -3,13 +3,35 @@
 	--var-message-spacing: 20px
 	--var-message-spacing-negative: calc(var(--var-message-spacing) * -1)
 
-	min-height: calc(100vh - 105px)
+	min-height: calc(100vh - 60px)
 	display: flex
 	flex-direction: column
 
 	@media screen and ( min-width: 1100px )
 
 		--var-message-spacing: 100px
+
+	.minBanners
+
+		display: flex
+		padding: 0 2rem
+		gap: 2rem
+
+		> a
+
+			border-radius: 2rem
+			padding: 2rem
+			flex: 1
+			height: 15rem
+			background-image: linear-gradient(160deg, #002f84, #011538)
+			color: #fff
+			border: 1px solid #011b4a
+			box-shadow: 0px 0 20px #00000066
+
+			&:hover
+
+				cursor: pointer
+				text-decoration: none
 
 	.homepageBanner
 
@@ -21,7 +43,7 @@
 		background: #000000
 		border-radius: 2rem
 		margin: 0 2rem 2rem 2rem
-		background-image: radial-gradient(circle at 80% 50%,#0b2961, #00042c)
+		background-image: radial-gradient(circle at 80% 50%, #0b2961, #00042c)
 		border: 1px solid #061342
 		box-shadow: 0px 0 20px #00000066
 		background-position: 50% 90%

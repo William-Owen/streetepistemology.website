@@ -15,6 +15,7 @@ const IndexPage = () => {
 
 	const [ messagesClassName, setMessagesClassName ] = useState(style.creativeContainer);
 	const rootClassName = clsx([ style.pageHomepage, 'pageHomepage' ]);
+
 	const doMessages = () => {
 		setMessagesClassName(clsx([ style.creativeContainer, style.show ]));
 	};
@@ -51,18 +52,24 @@ const IndexPage = () => {
 								<p style={{ transitionDelay: `${x * 1}s` }} className={style.chatPersonA}>
 									{message[0]}
 								</p>
-								<p
-									style={{
-										transitionDelay: `${x * 1 + 0.5}s`
-									}}
-									className={style.chatPersonB}
-								>
+								<p style={{ transitionDelay: `${x * 1 + 0.5}s` }} className={style.chatPersonB}>
 									{message[1]}
 								</p>
 							</span>
 						))}
 					</div>
 				</div>
+			</div>
+			<div className={style.minBanners}>
+				<Link to="/resources/youtube" className={style.youTubeBanner}>
+					<h4 className="displayHeading7">See Street Epistemology in action on YouTube</h4>
+				</Link>
+				<Link to="/resources/communities" className={style.communitiesBanner}>
+					<h4 className="displayHeading7">Join the conversation in our communities</h4>
+				</Link>
+				<Link to="/resources/support" className={style.communitiesBanner}>
+					<h4 className="displayHeading7">Mental health and support</h4>
+				</Link>
 			</div>
 		</article>
 	);

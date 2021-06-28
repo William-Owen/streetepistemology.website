@@ -15,7 +15,9 @@ const IndexPage = ({ data }) => {
 	const booksFiltered = filter ? allBooks.filter((book) => {
 		if (termInString(filter, book.node.frontmatter.title)) { return true }
 		if (book.node.frontmatter.subTitle && termInString(filter, book.node.frontmatter.subTitle)) { return true }
+		if (book?.node.frontmatter?.keywords.some( ( author ) => termInString(filter, author) )) { return true }
 		return book?.node.frontmatter?.authors.some( ( author ) => termInString(filter, author) )
+
 	})
 	: allBooks
 
@@ -49,7 +51,7 @@ const IndexPage = ({ data }) => {
 					{booksFiltered.map((book) => {
 
 						const image = getImage(book.node.frontmatter.coverImage)
-						const {title, subTitle, authors, goodReadLink} = book.node.frontmatter
+						const {title, subTitle, authors, goodReadLink, keywords} = book.node.frontmatter
 
 						return (
 
@@ -67,13 +69,24 @@ const IndexPage = ({ data }) => {
 
 								</h3>
 
-								<div className={style.authors}>by{` `}
+								<div className={style.author}>by{` `}
 									{authors.map(
 										(author) => {
 											return filter ?
 												<span>{highlightTerm(filter, author, 'termToHighlight')}</span>
 											:
 											<span>{author}</span>
+										}
+									)}
+								</div>
+
+								<div className={style.keywords}>Keywords{` `}
+									{keywords.map(
+										(keyword) => {
+											return filter ?
+												<span>{highlightTerm(filter, keyword, 'termToHighlight')}</span>
+											:
+											<span>{keyword}</span>
 										}
 									)}
 								</div>
@@ -107,6 +120,7 @@ export const pageQuery = graphql`
 						subTitle
 						authors
 						goodReadLink
+						keywords
 						coverImage {
 							childImageSharp {
 								gatsbyImageData(

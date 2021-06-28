@@ -11,7 +11,9 @@ import IconYouTube from '../../images/youtube.inline.svg';
 
 const IndexPage = () => {
 	return (
+
 		<>
+
 			<Page className={style.communitiesPage}>
 
 				<PageHeader sectionHeading='Street Epistemology' heading='Communities' />
@@ -22,7 +24,7 @@ const IndexPage = () => {
 
 						<h3>About our communities</h3>
 
-						<p>One of the fantastic things about the Street Epistemology community is that it attracts a wide range of people from a diverse collection of background, cultures and philosophical perspectives. By adopting the principles of Street Epistemology, these communities allow for engaging, lively and productive conversations.</p>
+						<p>One of the fantastic things about the Street Epistemology community is that it attracts a wide range of people from a diverse collection of backgrounds, cultures and philosophical perspectives. By adopting the principles of Street Epistemology, these communities allow for engaging, lively and productive conversations.</p>
 						<p>The communities listed here are run independently by members of the global Street Epistemology community and are not affiliated with any organizations or specific individuals.</p>
 						<p>The following guidelines are a suggestion for ensuring that everyone has a change to engage with the community in a productive and friendly way.</p>
 
@@ -43,12 +45,20 @@ const IndexPage = () => {
 
 						<h3>Online Communities</h3>
 
-						<a href="https://discord.gg/sKap3zM"><div>
-							<IconDiscord />
-						</div><div>Street Epistemology on Discord</div></a>
-						<a href="https://www.facebook.com/StreetEpistemology"><div>
-							<IconFacebook />
-						</div><div>Facebook: Street Epistemology</div></a>
+						<a href="https://discord.gg/sKap3zM">
+							<div>
+								<IconDiscord />
+							</div>
+							<div>Street Epistemology on Discord</div>
+						</a>
+						<a href="https://www.facebook.com/StreetEpistemology">
+							<div>
+								<IconFacebook />
+							</div>
+							<div>
+								Facebook: Street Epistemology
+							</div>
+						</a>
 						<a href="https://www.facebook.com/groups/learnstreetepistemology/"><div>
 							<IconFacebook />
 						</div><div>Facebook Group: Learn Street Epistemology</div></a>
