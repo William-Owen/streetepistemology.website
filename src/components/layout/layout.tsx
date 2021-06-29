@@ -1,16 +1,16 @@
-import React, { useRef, useState } from 'react';
-import PropTypes from 'prop-types';
-import clsx from 'clsx';
-import { Link, useStaticQuery, graphql } from 'gatsby';
-import NavigationLearn from '../../components/navigationLearn';
-import * as style from './Layout.module.sass';
-import SELogo from '../../images/street-epistemology-logo-simple-color.inline.svg';
-import WOLogo from '../../images/wo_dev_transparent.svg';
-import IconDiscord from '../../images/discord.inline.svg';
-import IconFacebook from '../../images/facebook.inline.svg';
-import IconReddit from '../../images/reddit.inline.svg';
-import IconTwitter from '../../images/twitter.inline.svg';
-import IconMenu from '../../images/menu.inline.svg';
+import React, { useRef, useState } from "react"
+import PropTypes from "prop-types"
+import clsx from "clsx"
+import { Link, useStaticQuery, graphql } from "gatsby"
+import NavigationLearn from "../../components/navigationLearn"
+import * as style from "./Layout.module.sass"
+import SELogo from "../../images/street-epistemology-logo-simple-color.inline.svg"
+import WOLogo from "../../images/wo_dev_transparent.svg"
+import IconDiscord from "../../images/discord.inline.svg"
+import IconFacebook from "../../images/facebook.inline.svg"
+import IconReddit from "../../images/reddit.inline.svg"
+import IconTwitter from "../../images/twitter.inline.svg"
+import IconMenu from "../../images/menu.inline.svg"
 
 interface LayoutProps {
 	children: any
@@ -18,10 +18,10 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
 
-	const rootClassName = clsx([ style.Layout, 'Layout' ]);
-	const [ isMenuOpen, setIsMenuOpen ] = useState(false);
-	const primaryNavigationRef = useRef();
-	let headerClassName = '';
+	const rootClassName = clsx([ style.Layout, "Layout" ])
+	const [ isMenuOpen, setIsMenuOpen ] = useState(false)
+	const primaryNavigationRef = useRef()
+	let headerClassName = ""
 
 	// Get meta data from gatsby-config
 
@@ -38,31 +38,37 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 				}
 			}
 		`
-	);
+	)
 
-	const metaData = site.siteMetadata;
+	const metaData = site.siteMetadata
 
 	// Layout event handlers
 
-	const handelMenuClick = () => setIsMenuOpen(!isMenuOpen);
-	const handelMenuLinkClick = () => setIsMenuOpen(false);
+	const handelMenuClick = () => setIsMenuOpen(!isMenuOpen)
+	const handelMenuLinkClick = () => setIsMenuOpen(false)
 
 	// Handle body locking when menu is open. We need to
 	// check for the window object to avoid issues during
 	// gatsby building
 
 	if (typeof window !== `undefined`) {
+
 		if (isMenuOpen) {
-			document.body.classList.add(style.scrollLock);
-			headerClassName = style.menuOpen;
+
+			document.body.classList.add(style.scrollLock)
+			headerClassName = style.menuOpen
+
 		} else {
-			document.body.classList.remove(style.scrollLock);
+
+			document.body.classList.remove(style.scrollLock)
+
 		}
+
 	}
 
 	return (
 
-		<div className={rootClassName}>
+		<div id="page-top" className={rootClassName}>
 			<header className={headerClassName}>
 				<SELogo className={style.logo} />
 				<Link className={style.siteTitle} to="/">
@@ -102,28 +108,39 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
 			<footer>
 				<div className={style.linksAndCredit}>
+
 					<nav>
+
 						<h4 className="h5">Content</h4>
 
+						<a href="#page-top">Back to top page</a>
 						<Link to="/learn">Learn Street Epistemology</Link>
 						<Link to="/resources">Street Epistemology Resources</Link>
 						<Link to="/faqs">Street Epistemology FAQs</Link>
 						<a href="https://www.evolvefish.com/Street-Epistemology_c_143.html">Merchandise Shop</a>
+
 					</nav>
 					<nav>
+
 						<h4 className="h5">Social</h4>
+
 						<a href={metaData.discordUrl}>Street Epistemology Discord</a>
 						<a href={metaData.facebookUrl}>Street Epistemology Facebook</a>
 						<a href={metaData.redditUrl}>Street Epistemology Reddit</a>
 						<a href={metaData.twitterUrl}>Street Epistemology Twitter</a>
+
 					</nav>
 					<nav>
+
 						<h4 className="h5">Website</h4>
+
 						<a href="mailto:contact@streetepistemology.com">Contact Street Epistemology International</a>
 						<Link to="/terms">Website Terms of Service</Link>
 						<Link to="/privacy">Website Privacy Policy</Link>
+
 					</nav>
 					<div className={style.meta}>
+
 						<nav>
 							<a href={metaData.discordUrl}>
 								<IconDiscord />
@@ -138,6 +155,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 								<IconTwitter />
 							</a>
 						</nav>
+
 						<div className={style.woCredit}>
 							<WOLogo alt="wo.dev" />
 							<p>
@@ -146,6 +164,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 								<a href="https://wo.dev">wo.dev</a>
 							</p>
 						</div>
+
 						<div className={style.sei}>
 							<div>
 								<h4 className="h5">Street Epistemology International</h4>
@@ -165,16 +184,21 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 						</div>
 					</div>
 				</div>
+
 				<div>
 					<SELogo className={style.footerLogo} />
 					<p className="copyright">
-						© {new Date().getFullYear()}{' '}
+						© {new Date().getFullYear()}{" "}
 						<a href="https://streetepistemologyinternational.org/">Street Epistemology International</a>
 					</p>
 				</div>
-			</footer>
-		</div>
-	);
-};
 
-export default Layout;
+			</footer>
+
+		</div>
+
+	)
+
+}
+
+export default Layout

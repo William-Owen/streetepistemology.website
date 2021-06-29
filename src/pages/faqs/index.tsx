@@ -38,21 +38,28 @@ const DisplayFAQ = ({ faq }) => {
 	const { title, moreInformation } = faq.node.frontmatter
 
 	return (
+
 		<section id={id}>
+
 			<h4>{title}</h4>
 
 			<main dangerouslySetInnerHTML={{ __html: html }} />
 
 			{moreInformation && (
-				<aside className={style.moreInformation}>
-					<h5>Also see</h5>
 
-					{moreInformation.map((mi) => (
-						<DisplayMoreInformationLink key={mi.link} moreInfo={mi} />
-					))}
+				<aside className={style.moreInformation}>
+
+					<h5>Also see</h5>
+					{moreInformation.map((mi) => <DisplayMoreInformationLink key={mi.link} moreInfo={mi} />)}
+
 				</aside>
+
 			)}
+
+			<a href='#top'>Back to questions</a>
+
 		</section>
+
 	)
 
 }
@@ -67,7 +74,7 @@ const IndexPage: React.FC = ({ data }) => {
 			<PageHeader
 				heading='Frequently Asked Questions'
 				subHeading='These are the questions about Street Epistemology that we hear a the most within the community and our best attempts to answer them.'/>
-			<main>
+			<main id="top">
 				<PageNavigation className={style.PageNavigation}>
 					<h3 className='h4'>Questions</h3>
 					{allFaqs.map((faq) => (
