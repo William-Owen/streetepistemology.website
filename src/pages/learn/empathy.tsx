@@ -1,19 +1,41 @@
 import React from 'react'
 import Page from '../../components/Page'
-import PageHeader from '../../components/PageHeader'
+import { graphql } from "gatsby"
+import LearnPageTemplate from "../../components/LearnPageTemplate"
+
 import * as style from './learn.module.sass'
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+
+	const content = data.page.childMarkdownRemark.html
+	const { title } = data.page.childMarkdownRemark.frontmatter
+
 	return (
 		<>
 			<Page className={style.leanPage}>
-				<PageHeader
-					sectionHeading='Learn Street Epistemology'
-					heading='Empathy'
-				/>
+				<LearnPageTemplate title={title} content={content} />
 			</Page>
 		</>
 	)
 }
 
 export default IndexPage
+
+
+export const pageQuery = graphql`
+	query {
+		page: file(
+			name: {
+				eq: "empathy"
+			}
+		) {
+			childMarkdownRemark {
+				html
+				frontmatter {
+					title
+					order
+				}
+			}
+		}
+	}
+`

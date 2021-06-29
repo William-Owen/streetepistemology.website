@@ -26,7 +26,7 @@ export const pageQuery = graphql`
 	query {
 		page: file(
 			name: {
-				eq: "listen"
+				eq: "collaboration"
 			}
 		) {
 			childMarkdownRemark {

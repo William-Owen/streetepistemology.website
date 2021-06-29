@@ -5,22 +5,32 @@
 		"jest": true,
 		"cypress/globals": true
 	},
+	"ignorePatterns": [
+		"cypress/*.js",
+		"**/cypress/*.js"
+	],
+	"parser": "@typescript-eslint/parser",
 	"plugins": [
-		"cypress"
+		"cypress",
+		"@typescript-eslint"
 	],
 	"settings": {
 		"import/resolver": {
 			"node": {
-				"extensions": [".js", ".jsx", ".ts", ".tsx"]
+				"extensions": [
+					".js",
+					".jsx",
+					".ts",
+					".tsx"
+				]
 			}
 		}
 	},
 	"extends": [
-		"plugin:mdx/recommended",
-		"airbnb",
-		"plugin:import/errors",
-		"plugin:import/warnings",
-		"plugin:import/typescript"
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended"
 	],
 	"rules": {
 		"semi": [
@@ -71,6 +81,9 @@
 			"tab"
 		],
 		"react/no-danger": 0,
+		"react/prop-types": [
+			"ignore"
+		],
 		"react/forbid-prop-types": [
 			1,
 			{
@@ -97,7 +110,8 @@
 			{
 				"extensions": [
 					".js",
-					".jsx"
+					".jsx",
+					".tsx"
 				]
 			}
 		]

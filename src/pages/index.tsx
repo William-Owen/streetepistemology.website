@@ -1,32 +1,30 @@
-import React, { useState, useEffect } from 'react';
-import clsx from 'clsx';
-import { Link } from 'gatsby';
-import imageEarth from '../images/earth.webp';
-import * as style from './index.module.sass';
-import SEO from '../components/seo.js';
+import React, { useState, useEffect } from "react"
+import clsx from "clsx"
+import { Link } from "gatsby"
+import imageEarth from "../images/earth.webp"
+import * as style from "./index.module.sass"
+import SEO from "../components/seo"
 
 const IndexPage = () => {
+
+	const [messagesClassName, setMessagesClassName] = useState(style.creativeContainer)
+	const rootClassName = clsx([style.pageHomepage, "pageHomepage"])
+	const doMessages = () => setMessagesClassName(clsx([style.creativeContainer, style.show]))
 	const messages = [
-		[ 'The earth is flat.', 'The earth is a globe.' ],
-		[ 'We landed on the moon in 1969.', 'The moon landings are a NASA hoax.' ],
-		[ 'Global warming is a real concern.', `Global warming is a capitalist hoax!` ],
-		[ 'The Earth is 6000 years old.', `The Earth is 4.5 billion years old!` ]
-	];
+		["The earth is flat.", "The earth is a globe."],
+		["We landed on the moon in 1969.", "The moon landings are a NASA hoax."],
+		["Global warming is a real concern.", `Global warming is a capitalist hoax!`],
+		["The Earth is 6000 years old.", `The Earth is 4.5 billion years old!`],
+	]
 
-	const [ messagesClassName, setMessagesClassName ] = useState(style.creativeContainer);
-	const rootClassName = clsx([ style.pageHomepage, 'pageHomepage' ]);
-
-	const doMessages = () => {
-		setMessagesClassName(clsx([ style.creativeContainer, style.show ]));
-	};
-
-	useEffect(() => {
-		doMessages();
-	}, []);
+	useEffect(() => doMessages(), [])
 
 	return (
+
 		<article className={rootClassName}>
+
 			<SEO title="Home" />
+
 			<div className={style.homepageBanner}>
 				<div className={style.heroMessage}>
 					<div>
@@ -45,6 +43,7 @@ const IndexPage = () => {
 						</div>
 					</div>
 				</div>
+
 				<div style={{ backgroundImage: `url(${imageEarth})` }} className={messagesClassName}>
 					<div>
 						{messages.map((message, x) => (
@@ -60,6 +59,7 @@ const IndexPage = () => {
 					</div>
 				</div>
 			</div>
+
 			<div className={style.minBanners}>
 				<Link to="/resources/youtube" className={style.youTubeBanner}>
 					<h4 className="displayHeading7">See Street Epistemology in action on YouTube</h4>
@@ -71,8 +71,11 @@ const IndexPage = () => {
 					<h4 className="displayHeading7">Mental health and support</h4>
 				</Link>
 			</div>
-		</article>
-	);
-};
 
-export default IndexPage;
+		</article>
+
+	)
+
+}
+
+export default IndexPage
