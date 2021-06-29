@@ -4,7 +4,7 @@ import * as style from "./learn.module.sass"
 import LearnPageTemplate from "../../components/LearnPageTemplate"
 import Page from "../../components/Page"
 
-const IndexPage = ({ data }) => {
+const IndexPage: React.FC = ({ data }) => {
 
 	const content = data.page.childMarkdownRemark.html
 	const { title } = data.page.childMarkdownRemark.frontmatter

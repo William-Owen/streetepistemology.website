@@ -1,8 +1,9 @@
-import React from 'react'
-import Page from '../components/Page'
-import PageHeader from '../components/PageHeader'
+import React from "react"
+import Page from "../components/Page"
+import PageHeader from "../components/PageHeader"
 
-const IndexPage = () => {
+const IndexPage: React.FC = () => {
+
 	return (
 		<Page>
 			<PageHeader heading='Privacy policy' />
@@ -12,14 +13,14 @@ const IndexPage = () => {
 
 				<p>
 					This Privacy Policy explains the collection, use, and
-					disclosure of "personal information" by
+					disclosure of &quot;personal information&quot; by
 					StreetEpistemology.com. Unless otherwise noted, this Privacy
 					Policy applies to your use of all websites that
 					StreetEpistemology.com operates, including
 					https://streetepistemology.com (collectively, the
-					"Websites"), as well as the products, information, and
+					&quot;Websites&quot;), as well as the products, information, and
 					services provided through the Websites (together with the
-					Websites, the "Services"). This Privacy Policy does not
+					Websites, the &quot;Services&quot;). This Privacy Policy does not
 					apply to any of the websites operated by affiliates of
 					StreetEpistemology.com.
 				</p>
@@ -28,10 +29,10 @@ const IndexPage = () => {
 					respect to our use and disclosure of non personal browsing
 					and site usage data that StreetEpistemology.com collects as
 					the provider of the Services. That commitment is contained
-					in a "Data Usage Policy," below.
+					in a &quot;Data Usage Policy,&quot; below.
 				</p>
 				<p>
-					As used in this policy, "personal information" means
+					As used in this policy, &quot;personal information&quot; means
 					information that would allow a party to identify you such
 					as, for example, your name, address or location, telephone
 					number, or email address.
@@ -51,7 +52,7 @@ const IndexPage = () => {
 					Services, whether personal information or non personal
 					browsing and site usage data. We have designed our Privacy
 					Policy and our Data Usage Policy consistent with the
-					following principles (the "Principles"):
+					following principles (the &quot;Principles&quot;):
 				</p>
 			</section>
 			<section>
@@ -124,7 +125,7 @@ const IndexPage = () => {
 					Emails and Newsletters. We use the personal information you
 					provide to us when you send us emails or sign up to receive
 					updates from StreetEpistemology.com in order to respond to
-					your request – for example, to reply to your email or to
+					your request - for example, to reply to your email or to
 					send you communications about StreetEpistemology.com news
 					and campaigns.
 				</p>
@@ -134,8 +135,8 @@ const IndexPage = () => {
 
 				<p>
 					Registered Users. When you register to obtain a user account
-					on any of the Services (any such person, a "Registered
-					User"), you may be asked to provide personal information to
+					on any of the Services (any such person, a &quot;Registered
+					User&quot;), you may be asked to provide personal information to
 					create your account and establish a password and profile. We
 					encourage you to
 				</p>
@@ -165,7 +166,7 @@ const IndexPage = () => {
 				<h1>Disclosures of Personal Information</h1>
 
 				<p>
-					In general, it is not StreetEpistemology.com’s practice to
+					In general, it is not StreetEpistemology.com&#39;s practice to
 					disclose personal information to third parties. Other than
 					providing you with attribution using your nickname in
 					connection with your Creative Commons licensed works
@@ -220,7 +221,7 @@ const IndexPage = () => {
 				<p>
 					We also reserve the right to remove accounts and/or people
 					from the List of 10,000 for any policy violations, using
-					someone else's name, using a trademarked term, or an
+					someone else&#39;s name, using a trademarked term, or an
 					offensive alias, for example.
 				</p>
 			</section>
@@ -232,7 +233,7 @@ const IndexPage = () => {
 					(1) join the Speaker List, (2) leave the Speaker List, and
 					(3) indicate the best way people can reach you in order to
 					arrange for a talk, including any other information you deem
-					relevant in the "brief note" field.
+					relevant in the &quot;brief note&quot; field.
 				</p>
 				<p>
 					Users must be aware that the Speaker List is public, which
@@ -246,7 +247,7 @@ const IndexPage = () => {
 				<p>
 					We also reserve the right to remove accounts and/or people
 					from the Speaker List for any policy violations, using
-					someone else's name, using a trademarked term, or an
+					someone else&#39;s name, using a trademarked term, or an
 					offensive alias, for example.
 				</p>
 				<p>
@@ -292,7 +293,7 @@ const IndexPage = () => {
 					When you use the Services, our servers (which may be hosted
 					by a third party service provider) may collect information
 					indirectly and automatically (through, for example, the use
-					of your "IP address") about your activities while visiting
+					of your &quot;IP address&quot;) about your activities while visiting
 					the Websites and information about the browser you are
 					using.
 				</p>
@@ -319,10 +320,10 @@ const IndexPage = () => {
 					StreetEpistemology.com may transfer some or all of your
 					personal and/or non personal browsing information to a third
 					party as a result of a reorganization, spin-off, or similar
-					transaction. Upon such transfer, the acquirer’s privacy
+					transaction. Upon such transfer, the acquirer&#39;s privacy
 					policy will apply. In such event, StreetEpistemology.com
 					will use reasonable efforts to notify you and to ensure that
-					at the time of the transaction the acquirer’s privacy policy
+					at the time of the transaction the acquirer&#39;s privacy policy
 					complies with the Principles.
 				</p>
 			</section>
@@ -331,7 +332,7 @@ const IndexPage = () => {
 
 				<p>
 					The Services are not directed at children under the age of
-					13. Consistent with the federal Children’s Online Privacy
+					13. Consistent with the federal Children&#39;s Online Privacy
 					Protection Act of 1998 (COPPA), we will never knowingly
 					request personal information from anyone under the age of 13
 					without requiring parental consent. Our Master Terms of Use
@@ -381,10 +382,10 @@ const IndexPage = () => {
 
 				<p>
 					The StreetEpistemology.com Privacy Policy is derived from
-					the{' '}
+					the{" "}
 					<a href='https://www.google.com/url?q=https://creativecommons.org/privacy/&amp;sa=D&amp;ust=1467070824468000&amp;usg=AFQjCNGGrIvH-Axttr5wY6qkG5J7yRu_iQ'>
 						Creative Commons Privacy Policy
-					</a>{' '}
+					</a>{" "}
 					which is dedicated to the public domain under the
 					StreetEpistemology.com CC0 Public Domain Dedication.
 				</p>
@@ -404,6 +405,7 @@ const IndexPage = () => {
 			</section>
 		</Page>
 	)
+
 }
 
 export default IndexPage

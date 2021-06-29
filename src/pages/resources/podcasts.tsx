@@ -7,9 +7,8 @@ import * as style from "./podcasts.module.sass"
 
 interface IndexPageProps {
 
-	data: {
-		allMarkdownRemark: any
-	}
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	data: any
 
 }
 

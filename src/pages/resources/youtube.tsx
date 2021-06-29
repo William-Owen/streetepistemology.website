@@ -1,12 +1,14 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Page from '../../components/Page'
-import PageHeader from '../../components/PageHeader'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import YouTubeIcon from '../../images/youtube.inline.svg'
-import * as style from './youtube.module.sass'
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import React from "react"
+import { graphql } from "gatsby"
+import Page from "../../components/Page"
+import PageHeader from "../../components/PageHeader"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import YouTubeIcon from "../../images/youtube.inline.svg"
+import * as style from "./youtube.module.sass"
 
-const IndexPage = ({ data }) => {
+const IndexPage: React.FC = ({ data }) => {
+
 	const allChannels = data.allMarkdownRemark.edges
 
 	return (
@@ -16,8 +18,7 @@ const IndexPage = ({ data }) => {
 					className={style.YouTubeHeader}
 					sectionHeading='Street Epistemology Resources'
 					heading='See it on YouTube'
-					subHeading='YouTube can be a great place to see Street Epistemology in action; and watch some fantastic people having amazing conversations.'
-				/>
+					subHeading='YouTube can be a great place to see Street Epistemology in action; and watch some fantastic people having amazing conversations.'/>
 
 				<div className={style.channelListing}>
 					{allChannels.map(
@@ -29,15 +30,17 @@ const IndexPage = ({ data }) => {
 									channelImage: any
 									shortDescription: string
 								}
+								id: string
 								html: string
 							}
 						}) => {
+
 							const image = getImage(
 								channel.node.frontmatter.channelImage
 							)
 
 							return (
-								<div className={style.youtubeChannel}>
+								<div key={channel.node.id} className={style.youtubeChannel}>
 
 									<header>
 										<div className={style.channelImage}>
@@ -56,12 +59,14 @@ const IndexPage = ({ data }) => {
 
 								</div>
 							)
+
 						}
 					)}
 				</div>
 			</Page>
 		</>
 	)
+
 }
 
 export const pageQuery = graphql`

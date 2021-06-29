@@ -1,16 +1,17 @@
-import React from 'react'
-import Page from '../../components/Page'
-import PageHeader from '../../components/PageHeader'
+import React from "react"
+import Page from "../../components/Page"
+import PageHeader from "../../components/PageHeader"
 
-const IndexPage = () => {
+const IndexPage: React.FC = () => {
+
 	return (
 		<>
 			<Page>
+
 				<PageHeader
 					sectionHeading='Street Epistemology Resources'
 					heading='Tools'
-					subHeading={`Here are some useful tools and documents you might find useful.`}
-				/>
+					subHeading={`Here are some useful tools and documents you might find useful.`}/>
 
 				<ul>
 
@@ -32,6 +33,7 @@ const IndexPage = () => {
 			</Page>
 		</>
 	)
+
 }
 
 export default IndexPage

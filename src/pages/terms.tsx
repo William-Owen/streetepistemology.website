@@ -1,8 +1,9 @@
-import React from 'react'
-import Page from '../components/Page'
-import PageHeader from '../components/PageHeader'
+import React from "react"
+import Page from "../components/Page"
+import PageHeader from "../components/PageHeader"
 
-const IndexPage = () => {
+const IndexPage: React.FC = () => {
+
 	return (
 		<>
 			<Page>
@@ -10,6 +11,7 @@ const IndexPage = () => {
 			</Page>
 		</>
 	)
+
 }
 
 export default IndexPage

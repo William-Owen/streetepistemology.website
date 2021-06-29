@@ -1,15 +1,16 @@
-import React from 'react'
-import Page from '../../components/Page'
-import PageHeader from '../../components/PageHeader'
-import PageNavigation from '../../components/PageNavigation'
+import React from "react"
+import Page from "../../components/Page"
+import PageHeader from "../../components/PageHeader"
+import PageNavigation from "../../components/PageNavigation"
 import * as style from "./communities.module.sass"
-import IconDiscord from '../../images/discord.inline.svg';
-import IconFacebook from '../../images/facebook.inline.svg';
-import IconReddit from '../../images/reddit.inline.svg';
-import IconTwitter from '../../images/twitter.inline.svg';
-import IconYouTube from '../../images/youtube.inline.svg';
+import IconDiscord from "../../images/discord.inline.svg"
+import IconFacebook from "../../images/facebook.inline.svg"
+import IconReddit from "../../images/reddit.inline.svg"
+import IconTwitter from "../../images/twitter.inline.svg"
+import IconYouTube from "../../images/youtube.inline.svg"
 
-const IndexPage = () => {
+const IndexPage: React.FC = () => {
+
 	return (
 
 		<>
@@ -29,7 +30,7 @@ const IndexPage = () => {
 						<p>The following guidelines are a suggestion for ensuring that everyone has a change to engage with the community in a productive and friendly way.</p>
 
 						<ol>
-							<li>Treat everyone and their views charitably and with kindness, especially if you don't like or agree with them.</li>
+							<li>Treat everyone and their views charitably and with kindness, especially if you don&apos;t like or agree with them.</li>
 							<li>Assume good faith and good intentions, especially when people are perhaps expressing ideas for the first time.</li>
 							<li>Remember, any interaction with someone might be seen, read or overheard by someone new to the community.</li>
 							<li>If you find yourself getting angry, frustrated or irritated we strongly recommend that you take a break.</li>
@@ -85,6 +86,7 @@ const IndexPage = () => {
 			</Page>
 		</>
 	)
+
 }
 
 export default IndexPage

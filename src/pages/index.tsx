@@ -5,7 +5,7 @@ import imageEarth from "../images/earth.webp"
 import * as style from "./index.module.sass"
 import SEO from "../components/seo"
 
-const IndexPage = () => {
+const IndexPage: React.FC = () => {
 
 	const [messagesClassName, setMessagesClassName] = useState(style.creativeContainer)
 	const rootClassName = clsx([style.pageHomepage, "pageHomepage"])
