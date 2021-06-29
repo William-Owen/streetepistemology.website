@@ -12,7 +12,12 @@ import IconReddit from '../../images/reddit.inline.svg';
 import IconTwitter from '../../images/twitter.inline.svg';
 import IconMenu from '../../images/menu.inline.svg';
 
-const Layout = ({ children }) => {
+interface LayoutProps {
+	children: any
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+
 	const rootClassName = clsx([ style.Layout, 'Layout' ]);
 	const [ isMenuOpen, setIsMenuOpen ] = useState(false);
 	const primaryNavigationRef = useRef();
@@ -54,7 +59,9 @@ const Layout = ({ children }) => {
 			document.body.classList.remove(style.scrollLock);
 		}
 	}
+
 	return (
+
 		<div className={rootClassName}>
 			<header className={headerClassName}>
 				<SELogo className={style.logo} />
@@ -168,10 +175,6 @@ const Layout = ({ children }) => {
 			</footer>
 		</div>
 	);
-};
-
-Layout.propTypes = {
-	children: PropTypes.node.isRequired
 };
 
 export default Layout;

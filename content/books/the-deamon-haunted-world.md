@@ -2,7 +2,8 @@
 title: "The Demon-Haunted World"
 subTitle: "Science as a Candle in the Dark"
 keywords:
-- Thinking
+- Science
+- Religion
 isbn: 0735217556
 coverImage: the-demon-haunted-world.jpg
 goodReadLink: https://www.goodreads.com/book/show/42041926-the-scout-mindset

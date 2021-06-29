@@ -1,8 +1,8 @@
 ---
 title: "A Manual for Creating Atheists"
 keywords:
-- discourse
-- religion
+- Religion
+- Discourse
 coverImage: amfca.jpg
 goodReadLink: https://www.goodreads.com/book/show/17937621-a-manual-for-creating-atheists
 authors:

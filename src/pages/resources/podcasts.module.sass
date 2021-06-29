@@ -1,0 +1,36 @@
+.podcastPage
+
+	width: 100%
+	max-width: 100%
+
+	.podcastHeader
+
+		text-align: center
+
+		p
+
+			margin: 0 auto
+
+	.podcastPageListing
+
+		--var-minWidth: calc(320px - 4rem)
+
+		display: grid
+		grid-template-columns: repeat(auto-fit,minmax(var(--var-minWidth),1fr))
+		grid-gap: 1rem
+
+		a
+
+			display: block
+			background: var(--color-island)
+			padding: 2rem
+			text-align: center
+			color: #fff
+
+			> div
+
+				border: 2px solid #fff
+
+			h3
+
+				margin: 1rem 0 0 0

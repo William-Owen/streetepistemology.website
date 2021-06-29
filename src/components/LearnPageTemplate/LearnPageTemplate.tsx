@@ -1,5 +1,4 @@
 import React from "react"
-import * as style from "./LearnPageTemplate.module.sass"
 import NavigationLearn from "../navigationLearn"
 import PageHeader from "../PageHeader"
 import PageNavigation from "../PageNavigation"
@@ -11,24 +10,21 @@ interface LearnPageTemplateProps {
 
 const LearnPageTemplate: React.FC<LearnPageTemplateProps> = ({ title, content }) => {
 
-	return (
-		<>
+	return (<>
 
-			<PageHeader sectionHeading="Learn Street Epistemology" heading={title} />
+		<PageHeader sectionHeading="Learn Street Epistemology" heading={title} />
 
-			<article>
+		<article>
 
-				<PageNavigation>
-					<NavigationLearn />
-				</PageNavigation>
+			<PageNavigation>
+				<NavigationLearn />
+			</PageNavigation>
 
-				<main dangerouslySetInnerHTML={{ __html: content }} />
+			<main dangerouslySetInnerHTML={{ __html: content }} />
 
-			</article>
+		</article>
 
-		</>
-
-	)
+	</>)
 
 }
 

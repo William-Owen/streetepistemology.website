@@ -2,8 +2,7 @@
 title: "How to have Impossible Conversations"
 subTitle: "A Very Practical Guide"
 keywords:
-- discourse
-- religion
+- Discourse
 coverImage: how-to-have-impossible-conversations.jpg
 goodReadLink: https://www.goodreads.com/book/show/17937621-a-manual-for-creating-atheists
 authors:
