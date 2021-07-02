@@ -12,7 +12,7 @@ const NavigationLearn = () => (
 		<Link to="/learn/empathy">Empathy</Link>
 		<Link to="/learn/question">Question</Link>
 		<Link to="/learn/progress">Progress</Link>
-		<Link to="/learn/basics">The Process</Link>
+		{/* <Link to="/learn/basics">The Process</Link> */}
 		<Link to="/learn/further-reading">Further reading</Link>
 
 	</>
