@@ -21,14 +21,12 @@ const IndexPage: React.FC = ({ data }) => {
 
 export default IndexPage
 
-
 export const pageQuery = graphql`
 	query {
 		page: file(
 			name: {
-				eq: "rapport"
+				eq: "history"
 			}
-			childrenMarkdownRemark: {elemMatch: {fields: {source: {eq: "learn"}}}}
 		) {
 			childMarkdownRemark {
 				html

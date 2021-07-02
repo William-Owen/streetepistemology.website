@@ -13,8 +13,8 @@ const IndexPage: React.FC = () => {
 	const messages = [
 		["The earth is flat.", "The earth is a globe."],
 		["We landed on the moon in 1969.", "The moon landings are a NASA hoax."],
-		["Global warming is a real concern.", `Global warming is a capitalist hoax!`],
-		["The Earth is 6000 years old.", `The Earth is 4.5 billion years old!`],
+		// ["Global warming is a real concern.", "Global warming is a capitalist hoax!"],
+		// ["The Earth is 6000 years old.", "The Earth is 4.5 billion years old!"],
 	]
 
 	useEffect(() => doMessages(), [])
@@ -30,15 +30,13 @@ const IndexPage: React.FC = () => {
 					<div>
 						<h2 className="displayHeading4">Helping others reflect on their ideas</h2>
 						<p>
-							Ideas shape our world, but sometimes talking about them can be difficult. Street
-							Epistemology is a productive non-confrontational way to help others explore and reflect on
-							their ideas and beliefs. Free and open to everyone, learn the tools and start having great
-							conversations.
+							Ideas shape our world, but sometimes talking about them can be difficult. Street Epistemology is a non-confrontational way to help others honestly explore and reflect on their ideas and beliefs.
+						</p>
+						<p>
+							Free and open to everyone, learn the tools and start having great conversations.
 						</p>
 						<div className={style.cta}>
-							<Link className={style.btnStartLearning} to="/learn">
-								Start learning
-							</Link>
+							<Link className={style.btnStartLearning} to="/learn">Start learning</Link>
 							<Link to="/faqs">Find out more</Link>
 						</div>
 					</div>

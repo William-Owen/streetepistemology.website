@@ -165,7 +165,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 							</p>
 						</div>
 
-						<div className={style.sei}>
+						{/* <div className={style.sei}>
 							<div>
 								<h4 className="h5">Street Epistemology International</h4>
 								<p>A 501(c)(3) non-profit organisation.</p>
@@ -181,7 +181,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 									EIN 83-4404993
 								</address>
 							</div>
-						</div>
+						</div> */}
+
 					</div>
 				</div>
 
@@ -189,7 +190,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 					<SELogo className={style.footerLogo} />
 					<p className="copyright">
 						© {new Date().getFullYear()}{" "}
-						<a href="https://streetepistemologyinternational.org/">Street Epistemology International</a>
+						{/* <a href="https://streetepistemologyinternational.org/">Street Epistemology International</a> */}
+						<a href="https://streetepistemologyinternational.org/">William Owen</a>
 					</p>
 				</div>
 
