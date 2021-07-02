@@ -1,5 +1,5 @@
 ---
 title: The Clearer Thinking Podcast
-link: https://www.clearerthinking.org/podcast
+link: https://fs.blog/knowledge-project/
 artwork: ./clearer-thinking.jpg
 ---
